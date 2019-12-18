@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import LogOutButton from '../LogOutButton/LogOutButton';
 
 
-const UserPage = ({ user }) => (
+const UserHeader = ({ user }) => (
   <div>
     <h1 id="welcome">
       Welcome, { user.username }!
@@ -17,4 +17,4 @@ const UserPage = ({ user }) => (
 const mapStateToProps = ({ user }) => ({ user });
 
 
-export default connect(mapStateToProps)(UserPage);
+export default connect(mapStateToProps)(UserHeader);
