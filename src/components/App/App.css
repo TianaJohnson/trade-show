@@ -8,8 +8,9 @@ body {
     margin: 50px;
 }
 
+/* removed login form form css */
 form {
-    background-color: #dbd5d5;
+    background-color: #802d2d;
     width: 30%;
     height: 250px;
     margin: 20px auto;
@@ -23,7 +24,7 @@ input {
 }
 
 .log-in, .log-out, .register {
-  background-color: #00acb0;
+  background-color: #060c0c;
   border-radius: 4px;
   color: #f8f8f8;
   min-height: 50px;

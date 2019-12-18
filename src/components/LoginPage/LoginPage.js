@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './LoginPage.css';
 
 class LoginPage extends Component {
   state = {
@@ -40,7 +41,8 @@ class LoginPage extends Component {
             {this.props.errors.loginMessage}
           </h2>
         )}
-        <form onSubmit={this.login}>
+        <form className="login_ui" 
+        onSubmit={this.login}>
           <h1>Login</h1>
           <div>
             <label htmlFor="username">
@@ -81,7 +83,9 @@ class LoginPage extends Component {
           >
             Register
           </button>
+        
         </center>
+        <br/>
       </div>
     );
   }
