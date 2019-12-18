@@ -8,7 +8,7 @@ body {
     margin: 50px;
 }
 
-/* removed login form form css */
+/* removed login form form css - TJ*/
 form {
     background-color: #802d2d;
     width: 30%;
@@ -23,6 +23,7 @@ input {
     margin-bottom: 10px;
 }
 
+/* these need to be added to there own css pages - TJ */
 .log-in, .log-out, .register {
   background-color: #060c0c;
   border-radius: 4px;
@@ -33,11 +34,13 @@ input {
   cursor: pointer;
 }
 
+/* Same with these */
 .log-in:hover, .log-out:hover, .register:hover {
   background-color: #008183;
 }
 
 /* This line makes the "Register" and "Login" buttons look like links */
+/* I may mess with this, I am not a huge fan of the look - TJ */
 .link-button {
     background:none;
     color:inherit;
