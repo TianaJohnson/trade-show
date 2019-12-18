@@ -1,0 +1,12 @@
+.dashboard {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: auto;
+    background-color: chartreuse;
+}
+
+.dash-card {
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 2px; 
+}
