@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Card from '@material-ui/core/Card';
+
 class AddNew extends Component {
     render() {
         return (
-            <div></div>
+            <div>
+                <Card className="addNewCard">
+
+                </Card>
+            </div>
          )
     }
 }
