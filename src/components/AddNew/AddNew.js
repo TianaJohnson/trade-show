@@ -41,6 +41,12 @@ class AddNew extends Component {
                                label="Country"
                                style={{ marginLeft: 10 }}>
                     </TextField>
+                    <br/>
+                    <h3>Whats the Brand?</h3>
+                    <TextField id="outlined-basic" 
+                               variant="outlined"
+                               label="Brand Name">
+                    </TextField>
                     </div>
                     <br/>
                     <Button variant="contained" 
