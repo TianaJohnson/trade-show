@@ -27,8 +27,7 @@ class AddNew extends Component {
                     <br/>
                     <TextField id="outlined-basic" 
                                variant="outlined"
-                               label="Location"
-                               style={{marginTop:10}}>
+                               label="Location">
                     </TextField>
                     </div>
                     <br/>
