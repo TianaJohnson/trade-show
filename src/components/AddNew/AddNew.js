@@ -21,7 +21,7 @@ class AddNew extends Component {
                     <Button variant="contained" 
                             color="secondary"
                             //onClick={}
-                            style={{ margin: 10 }}>
+                            style={{ marginTop: 10 }}>
                     Build!
                     </Button>
                     </div>
