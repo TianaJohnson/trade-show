@@ -3,4 +3,10 @@
     margin-left: 40px;
     margin-right: 40px;
     border-radius: 2px; 
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.new-build-form {
+    margin-left: 20px;
 }
