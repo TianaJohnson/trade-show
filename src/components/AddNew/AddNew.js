@@ -11,9 +11,10 @@ class AddNew extends Component {
             <div>
                 <Card className="addNewCard">
                     <div className="new-build-form">
-                        <h3 className="newBuild-title">New Builder Information</h3>
+                        <h1 className="newBuild-title">New Builder Information</h1>
 
                     <div className="new-input-fields">
+                        <h3>Builder Identification</h3>
                     <TextField id="outlined-basic" 
                                label="First Name" 
                                variant="outlined">
@@ -25,9 +26,20 @@ class AddNew extends Component {
                     </TextField>
                     <br/>
                     <br/>
+                    <h3> Where are they outta?</h3>
                     <TextField id="outlined-basic" 
                                variant="outlined"
-                               label="Location">
+                               label="State">
+                    </TextField>
+                    <TextField id="outlined-basic" 
+                               variant="outlined"
+                               label="City/Providence"
+                               style={{ marginLeft: 10 }}>
+                    </TextField>
+                    <TextField id="outlined-basic" 
+                               variant="outlined"
+                               label="Country"
+                               style={{ marginLeft: 10 }}>
                     </TextField>
                     </div>
                     <br/>
