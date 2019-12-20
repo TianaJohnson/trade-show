@@ -7,9 +7,9 @@ import './UserHeader.css';
 const UserHeader = ({ user }) => (
   <div className="userhead_ui">
     <h1 id="welcome">
-      Welcome, { user.username }!
+      Hey There, { user.username }!
     </h1>
-    <p>Your ID is: {user.id}</p>
+    {/* <p>Your ID is: {user.id}</p> */}
 
   </div>
 );
