@@ -2,16 +2,21 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from '@material-ui/core/Card';
 import TextField from '@material-ui/core/TextField';
+import './AddNew.css';
 
 class AddNew extends Component {
     render() {
         return (
             <div>
                 <Card className="addNewCard">
+                    <div className="new-build-form">
+                        <h2 className="newBuild-title">New Builder Information</h2>
+                    <br/>
                     <TextField id="outlined-basic" 
                                label="Outlined" 
                                variant="outlined">
                     </TextField>
+                    </div>
                 </Card>
             </div>
          )
