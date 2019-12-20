@@ -7,6 +7,10 @@ import './Dashboard.css';
 
 class Dashboard extends Component {
 
+    addNew = () => {
+        this.props.history.push('/add');
+      }
+
     render(){
         return (
             <div className="dashboard">
@@ -15,8 +19,10 @@ class Dashboard extends Component {
                     <UserHeader/>
                     <br/>
                     <Button variant="contained" 
-                            color="primary">
-                    Primary
+                            color="primary"
+                            onClick={this.addNew}
+                            style={{ margin: 10 }}>
+                    That new new
                     </Button>
                 </Card>
                 <br/>

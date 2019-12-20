@@ -20,4 +20,4 @@ class AddNew extends Component {
 const mapStateToProps = reduxStore => {
     return { reduxStore: reduxStore };
     }
-export default connect(mapStateToProps)(Template);
+export default connect(mapStateToProps)(AddNew);

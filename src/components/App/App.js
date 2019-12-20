@@ -15,6 +15,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
 import AboutPage from '../AboutPage/AboutPage';
 import Dashboard from '../Dashboard/Dashboard';
+import AddNew from '../AddNew/AddNew';
 //import UserHeader from '../UserHeader/UserHeader';
 
 import './App.css';
@@ -52,11 +53,11 @@ class App extends Component {
             />
             {/* This works the same as the other protected route, except that if the user is logged in,
             they will see the info page instead. */}
-            {/* <ProtectedRoute
+            <ProtectedRoute
               exact
-              path="/info"
-              component={InfoPage}
-            /> */}
+              path="/add"
+              component={AddNew}
+            />
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
           </Switch>
