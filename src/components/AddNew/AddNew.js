@@ -8,7 +8,7 @@ import './AddNew.css';
 class AddNew extends Component {
 
     addBuilder = () => {
-        this.props.history.push('/dashboard');
+        this.props.history.push('/');
       }
 
     render() {
