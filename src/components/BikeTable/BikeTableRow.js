@@ -6,7 +6,9 @@ import './BikeTable.css';
 class BikeTableRow extends Component {
     render() {
         return (
-            <div></div>
+            <div>
+                
+            </div>
          )
     }
 }
