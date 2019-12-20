@@ -6,6 +6,11 @@ import Button from '@material-ui/core/Button';
 import './AddNew.css';
 
 class AddNew extends Component {
+
+    addBuilder = () => {
+        this.props.history.push('/dashboard');
+      }
+
     render() {
         return (
             <div>
@@ -63,9 +68,9 @@ class AddNew extends Component {
                     <br/>
                     <Button variant="contained" 
                             color="secondary"
-                            //onClick={}
+                            onClick={this.addBuilder}
                             style={{ marginTop: 10 }}>
-                    Build!
+                    Add Builder!
                     </Button>
                     <br/>
                     </div>
