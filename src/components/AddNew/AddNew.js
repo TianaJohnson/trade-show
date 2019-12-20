@@ -11,12 +11,23 @@ class AddNew extends Component {
             <div>
                 <Card className="addNewCard">
                     <div className="new-build-form">
-                        <h2 className="newBuild-title">New Builder Information</h2>
+                        <h3 className="newBuild-title">New Builder Information</h3>
                     <br/>
+                    Builder Name
+                    <br/>
+                    <div className="new-input-fields">
                     <TextField id="outlined-basic" 
                                label="Outlined" 
-                               variant="outlined">
+                               variant="outlined"
+                               lable="Builder Name">
                     </TextField>
+                    <TextField id="outlined-basic" 
+                               label="Outlined" 
+                               variant="outlined"
+                               lable="Builder Name"
+                               style={{ marginLeft: 10 }}>
+                    </TextField>
+                    </div>
                     <br/>
                     <Button variant="contained" 
                             color="secondary"
@@ -24,6 +35,7 @@ class AddNew extends Component {
                             style={{ marginTop: 10 }}>
                     Build!
                     </Button>
+                    <br/>
                     </div>
                 </Card>
             </div>
