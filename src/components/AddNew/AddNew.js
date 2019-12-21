@@ -23,7 +23,7 @@ class AddNew extends Component {
     }
 
   //Send to saga to create a customer in the data base
-  addBuilder = event => {
+  addShow = event => {
     console.log("add show information");
     const action = {
       type: "ADD_SHOW",
@@ -133,7 +133,7 @@ class AddNew extends Component {
                     <br/>
                     <Button variant="contained" 
                             color="secondary"
-                            onClick={this.addBuilder}
+                            onClick={this.addShow}
                             style={{ marginTop: 10 }}>
                     Add Builder!
                     </Button>
