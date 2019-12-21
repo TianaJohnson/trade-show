@@ -2,12 +2,14 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-/**
- * GET route template
- */
-router.get('/', (req, res) => {
-    
+// create new builder (post)
+router.post('/', (req, res, next) => {
+    console.log(req.body);
+    if (req.isAuthenticated()) {
+        const queryText = " INSERT INTO "
+    }
 });
+
 
 /**
  * POST route template
