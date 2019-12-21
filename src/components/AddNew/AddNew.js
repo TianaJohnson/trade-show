@@ -6,6 +6,20 @@ import Button from '@material-ui/core/Button';
 import './AddNew.css';
 
 class AddNew extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            show: '',
+            location: '',
+            first: '',
+            last: '',
+            state: '',
+            city: '',
+            country: '',
+            brand: ''
+
+        }
+    }
 
     addBuilder = () => {
         this.props.history.push('/');
