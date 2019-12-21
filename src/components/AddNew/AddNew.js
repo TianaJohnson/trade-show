@@ -66,6 +66,7 @@ class AddNew extends Component {
                     <TextField id="outlined-basic" 
                             variant="outlined"
                             label="Location"
+                            name="location"
                             style={{ marginLeft: 10 }}
                             value={this.state.location}
                             onChange={this.handleChange}>
@@ -77,6 +78,7 @@ class AddNew extends Component {
                         <h3>Builder Identification</h3>
                     <TextField id="outlined-basic" 
                                label="First Name" 
+                               name="first"
                                variant="outlined"
                                value={this.state.first}
                                 onChange={this.handleChange}>
@@ -84,6 +86,7 @@ class AddNew extends Component {
                     <TextField id="outlined-basic" 
                                variant="outlined"
                                label="Last Name"
+                               name="last"
                                style={{ marginLeft: 10 }}
                                value={this.state.last}
                                 onChange={this.handleChange}>
@@ -94,12 +97,14 @@ class AddNew extends Component {
                     <TextField id="outlined-basic" 
                                variant="outlined"
                                label="State"
+                               name="state"
                                value={this.state.state}
                                onChange={this.handleChange}>
                     </TextField>
                     <TextField id="outlined-basic" 
                                variant="outlined"
                                label="City/Providence"
+                               name="city"
                                style={{ marginLeft: 10 }}
                                value={this.state.city}
                                onChange={this.handleChange}>
@@ -107,6 +112,7 @@ class AddNew extends Component {
                     <TextField id="outlined-basic" 
                                variant="outlined"
                                label="Country"
+                               name="country"
                                style={{ marginLeft: 10 }}
                                value={this.state.country}
                                onChange={this.handleChange}>
@@ -116,6 +122,7 @@ class AddNew extends Component {
                     <TextField id="outlined-basic" 
                                variant="outlined"
                                label="Brand Name"
+                               name="brand"
                                value={this.state.brand}
                             onChange={this.handleChange}>
                     </TextField>
