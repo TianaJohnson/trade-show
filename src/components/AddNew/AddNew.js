@@ -45,6 +45,7 @@ class AddNew extends Component {
 
   handleChange = (evt) => {
     this.setState({ [evt.target.name]: evt.target.value });
+    console.log(state)
     }
 
     render() {
@@ -56,12 +57,16 @@ class AddNew extends Component {
                     <div className="new-input-fields">  
                     <TextField id="outlined-basic" 
                             label="Show" 
-                            variant="outlined">
+                            variant="outlined"
+                            value={this.state.show}
+                            onChange={this.handleChange}>
                     </TextField>
                     <TextField id="outlined-basic" 
                             variant="outlined"
                             label="Location"
-                            style={{ marginLeft: 10 }}>
+                            style={{ marginLeft: 10 }}
+                            value={this.state.location}
+                            onChange={this.handleChange}>
                     </TextField>
                     <br/>
                     <br/>
@@ -77,30 +82,40 @@ class AddNew extends Component {
                     <TextField id="outlined-basic" 
                                variant="outlined"
                                label="Last Name"
-                               style={{ marginLeft: 10 }}>
+                               style={{ marginLeft: 10 }}
+                               value={this.state.last}
+                                onChange={this.handleChange}>
                     </TextField>
                     <br/>
                     <br/>
                     <h3> Where are they outta?</h3>
                     <TextField id="outlined-basic" 
                                variant="outlined"
-                               label="State">
+                               label="State"
+                               value={this.state.state}
+                               onChange={this.handleChange}>
                     </TextField>
                     <TextField id="outlined-basic" 
                                variant="outlined"
                                label="City/Providence"
-                               style={{ marginLeft: 10 }}>
+                               style={{ marginLeft: 10 }}
+                               value={this.state.city}
+                               onChange={this.handleChange}>
                     </TextField>
                     <TextField id="outlined-basic" 
                                variant="outlined"
                                label="Country"
-                               style={{ marginLeft: 10 }}>
+                               style={{ marginLeft: 10 }}
+                               value={this.state.country}
+                               onChange={this.handleChange}>
                     </TextField>
                     <br/>
                     <h3>Whats the Brand?</h3>
                     <TextField id="outlined-basic" 
                                variant="outlined"
-                               label="Brand Name">
+                               label="Brand Name"
+                               value={this.state.brand}
+                            onChange={this.handleChange}>
                     </TextField>
                     </div>
                     <br/>
