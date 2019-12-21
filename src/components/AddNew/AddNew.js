@@ -11,6 +11,7 @@ class AddNew extends Component {
         this.state = {
             show: '',
             location: '',
+            date: '',
             first: '',
             last: '',
             state: '',
