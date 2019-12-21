@@ -26,9 +26,17 @@ router.post('/add', (req, res, next) => {
                                  req.body.country,
                                  req.body.brand
                                  ])
-        .then
-    }
-});
+                                 .then(() => {
+                                    res.sendStatus(201);
+                                }).catch((error) => {
+                                    console.log('Something went wrong in POST new product', error);
+                                    res.sendStatus(500);
+                                });
+                            } else {
+                                res.sendStatus(403);
+                            }
+                        
+    });
 
 
 /**
