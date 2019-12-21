@@ -42,6 +42,11 @@ class AddNew extends Component {
     });
     this.props.history.push("/");
   };
+
+  handleChange = (evt) => {
+    this.setState({ [evt.target.name]: evt.target.value });
+    }
+
     render() {
         return (
             <div>
@@ -65,7 +70,9 @@ class AddNew extends Component {
                         <h3>Builder Identification</h3>
                     <TextField id="outlined-basic" 
                                label="First Name" 
-                               variant="outlined">
+                               variant="outlined"
+                               value={this.state.first}
+                                onChange={this.handleChange}>
                     </TextField>
                     <TextField id="outlined-basic" 
                                variant="outlined"
