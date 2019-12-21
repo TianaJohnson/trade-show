@@ -29,7 +29,7 @@ class AddNew extends Component {
                     </TextField>
                     <br/>
                     <br/>
-                        <h1>New Builder Information</h1>
+                        <h2>New Builder Information</h2>
                         
                         <h3>Builder Identification</h3>
                     <TextField id="outlined-basic" 
