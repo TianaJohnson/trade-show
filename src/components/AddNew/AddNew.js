@@ -46,7 +46,10 @@ class AddNew extends Component {
 
   handleChange = (evt) => {
     this.setState({ [evt.target.name]: evt.target.value });
-    console.log(this.state.value, evt.target.value)
+
+    console.log(evt.target.name, ': ' , evt.target.value);
+    // ^ This shows what name(state) we are updating in each input
+    // and what the actual intake is.
     }
 
     render() {
