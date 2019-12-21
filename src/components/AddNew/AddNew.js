@@ -19,6 +19,7 @@ class AddNew extends Component {
             country: '',
             brand: ''
         }
+        
     }
 
   //Send to saga to create a customer in the data base
@@ -45,7 +46,7 @@ class AddNew extends Component {
 
   handleChange = (evt) => {
     this.setState({ [evt.target.name]: evt.target.value });
-    console.log(state)
+    console.log(this.state.value, evt.target.value)
     }
 
     render() {
@@ -57,6 +58,7 @@ class AddNew extends Component {
                     <div className="new-input-fields">  
                     <TextField id="outlined-basic" 
                             label="Show" 
+                            name="show"
                             variant="outlined"
                             value={this.state.show}
                             onChange={this.handleChange}>
