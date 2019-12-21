@@ -18,14 +18,30 @@ class AddNew extends Component {
             city: '',
             country: '',
             brand: ''
-
         }
     }
 
-    addBuilder = () => {
-        this.props.history.push('/');
-      }
-
+  //Send to saga to create a customer in the data base
+  addBuilder = event => {
+    console.log("add show information");
+    const action = {
+      type: "ADD_SHOW",
+      payload: this.state
+    };
+    this.props.dispatch(action);
+    this.setState({
+        show: "",
+        location: "",
+        date: "",
+        first: "",
+        last: "",
+        state: "",
+        city: "",
+        country: "",
+        brand: ""
+    });
+    this.props.history.push("/");
+  };
     render() {
         return (
             <div>
