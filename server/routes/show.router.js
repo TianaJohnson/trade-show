@@ -4,8 +4,8 @@ const router = express.Router();
 
 // create new builder (post)
 router.post('/add', (req, res, next) => {
-    console.log(req.body);
-    if (req.isAuthenticated()) {
+        console.log(req.body);
+   // if (req.isAuthenticated()) {
         const queryText = ` INSERT INTO "initial_intake"
         ("show",
         "location",
@@ -32,9 +32,9 @@ router.post('/add', (req, res, next) => {
                                     console.log('Something went wrong in POST new product', error);
                                     res.sendStatus(500);
                                 });
-                            } else {
-                                res.sendStatus(403);
-                            }
+                            // } else {
+                            //     res.sendStatus(403);
+                            // }
                         
     });
 
