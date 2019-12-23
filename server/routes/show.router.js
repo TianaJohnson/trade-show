@@ -38,12 +38,4 @@ router.post('/add', (req, res, next) => {
                         
     });
 
-
-/**
- * POST route template
- */
-router.post('/', (req, res) => {
-
-});
-
 module.exports = router;
