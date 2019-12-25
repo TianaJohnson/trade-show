@@ -3,7 +3,7 @@ import { put } from 'redux-saga/effects';
 
 function* addShow(action) {
     try {
-      yield axios.post('/api/new', action.payload);
+      yield axios.post('/api/show/add', action.payload);
       yield alert('Show Information Added.')
      // yield put({ type: 'FETCH_SHOW' });
       console.log("Add Show Saga");
@@ -14,6 +14,7 @@ function* addShow(action) {
 
   function* addNewSaga() {
     
+    
   }
 
-  export default addNewSaga;
+  export default showIntakesaga;
