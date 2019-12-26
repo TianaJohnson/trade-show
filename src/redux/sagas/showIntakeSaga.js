@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { put } from 'redux-saga/effects';
+import { takeLatest,put } from 'redux-saga/effects';
 
 function* addShow(action) {
     try {
