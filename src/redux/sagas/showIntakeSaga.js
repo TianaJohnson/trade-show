@@ -12,8 +12,8 @@ function* addShow(action) {
     }
   }
 
-  function* addNewSaga() {
-    
+  function* showIntakesaga() {
+    yield takeLatest('ADD_SHOW', addShow);
     
   }
 
