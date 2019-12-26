@@ -18,4 +18,4 @@ const addNewReducer = (state = [] , action) => {
 
   })
 
-  export default addNewReducer;
+  export default showIntakeReducer;

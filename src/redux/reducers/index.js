@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import errors from './errorsReducer';
 import loginMode from './loginModeReducer';
 import user from './userReducer';
-import add from './addNewReducer';
+import add from './showIntakeReducer';
 
 
 
