@@ -2,8 +2,6 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-// create new builder (post)
-
 //**upon intake, name and date are not showing up */
 router.post('/add', (req, res, next) => {
         console.log(req.body);

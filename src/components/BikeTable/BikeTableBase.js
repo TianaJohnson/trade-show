@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import "./BikeFile.css";
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+import TableCell from '@material-ui/core/TableCell';
+//import TableBody from "@material-ui/core/TableBody";
+import "./BikeTable.css";
 
 class BikeTableBase extends Component {
   render() {

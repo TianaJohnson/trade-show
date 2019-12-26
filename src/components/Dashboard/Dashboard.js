@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import UserHeader from '../UserHeader/UserHeader';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
+import BikeTable from '../BikeTable/BikeTableBase';
 import './Dashboard.css';
 
 class Dashboard extends Component {
