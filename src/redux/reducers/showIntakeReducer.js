@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
 //buider intake SET reducer, interacts w/ saga
-const addNewReducer = (state = [] , action) => {
+const showIntakeReducer = (state = [] , action) => {
     console.log('Show and Builder information intake ');
       switch (action.type) {
         case 'SET_SHOW':
@@ -14,8 +14,6 @@ const addNewReducer = (state = [] , action) => {
     };
 
     export default combineReducers({
-      builderIntakeReducer,
-
+      showIntakeReducer,
   })
 
-  export default showIntakeReducer;
