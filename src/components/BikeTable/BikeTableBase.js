@@ -9,30 +9,16 @@ import { withStyles, makeStyles } from '@material-ui/core/styles';
 //import TableBody from "@material-ui/core/TableBody";
 import "./BikeTable.css";
 
-const StyledTableCell = withStyles(theme => ({
-  head: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-  },
-  body: {
-    fontSize: 14,
-  },
-}))(TableCell);
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 700,
-  },
-});
 
 class BikeTableBase extends Component {
-  const classes = useStyles();
+
 
   render() {
 
     return (
       <Paper>
-        <Table className={classes.table}>
+        <Table className="main-table">
           <TableHead>
             <TableRow>
               <TableCell>Brand</TableCell>
