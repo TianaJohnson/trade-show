@@ -74,6 +74,14 @@ class AddNew extends Component {
                             value={this.state.location}
                             onChange={this.handleChange}>
                     </TextField>
+                    <TextField id="outlined-basic" 
+                            variant="outlined"
+                            label="date"
+                            name="date"
+                            style={{ marginLeft: 10 }}
+                            value={this.state.location}
+                            onChange={this.handleChange}>
+                    </TextField>
                     <br/>
                     <br/>
                         <h2>New Builder Information</h2>
