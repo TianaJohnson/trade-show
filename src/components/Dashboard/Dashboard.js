@@ -25,6 +25,8 @@ class Dashboard extends Component {
                             style={{ margin: 10 }}>
                     That new new
                     </Button>
+                    <br/>
+                    <BikeTable/>
                 </Card>
                 <br/>
             </div>
