@@ -79,7 +79,7 @@ class AddNew extends Component {
                             label="date"
                             name="date"
                             style={{ marginLeft: 10 }}
-                            value={this.state.location}
+                            value={this.state.date}
                             onChange={this.handleChange}>
                     </TextField>
                     <br/>
