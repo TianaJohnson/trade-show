@@ -40,7 +40,10 @@ router.post('/add', (req, res, next) => {
     });
 
 router.get('/show', (req, res) => {
-    console.log('In show information git')
+    console.log('In show information git');
+    if (req.isAuthenticated()) {
+        console.log('req.user:', req.user);
+    }
 })
 
 module.exports = router;
