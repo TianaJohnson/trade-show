@@ -43,7 +43,20 @@ router.get('/show', (req, res) => {
     console.log('In show information git');
     if (req.isAuthenticated()) {
         console.log('req.user:', req.user);
-    }
-})
+        pool.query(`SELECT * FROM "initial_intake" 
+                    ORDER BY "id" DESC;`)
+                    .then( results => {
+                        console.log(results.rows)
+                        res.send(results.rows)
+                    })
+                    .catch(error => {
+                        console.log('Error making SELECT for initial-intake database:', error);
+                        res.sendStatus(500);
+                    });
+                    } else {
+                        // They are not authenticated.
+                        res.sendStatus(403);
+                }
+         });
 
 module.exports = router;
