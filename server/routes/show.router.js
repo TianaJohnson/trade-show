@@ -39,4 +39,8 @@ router.post('/add', (req, res, next) => {
                         
     });
 
+router.get('/show', (req, res) => {
+    console.log('In show information git')
+})
+
 module.exports = router;
