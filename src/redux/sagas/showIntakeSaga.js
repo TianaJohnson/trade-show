@@ -28,5 +28,4 @@ function* addShow(action) {
     yield takeLatest('FETCH_SHOW', fetchShow);
     
   }
-
   export default showIntakesaga;
