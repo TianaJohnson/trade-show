@@ -14,6 +14,13 @@ import "./BikeTable.css";
 
 class BikeTableBase extends Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+        show: [],
+    }
+}
+
   componentDidMount() {
     this.props.dispatch({ type: 'FETCH_SHOW', payload: { id: this.props.match.params.id } });
     }
