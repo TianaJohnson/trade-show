@@ -21,6 +21,8 @@ class BikeTableBase extends Component {
     }
 }
 
+/// This will be delt with later
+
   componentDidMount() {
     this.props.dispatch({ type: 'FETCH_SHOW', payload: { id: this.props.match.params.id } });
     }
