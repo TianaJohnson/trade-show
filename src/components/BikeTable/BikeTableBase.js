@@ -21,7 +21,7 @@ class BikeTableBase extends Component {
     }
 }
 
-/// This will be delt with later
+
 
   componentDidMount() {
     this.props.dispatch({ type: 'FETCH_SHOW', payload: { id: this.props.match.params.id } });
@@ -55,6 +55,6 @@ class BikeTableBase extends Component {
 }
 const mapStateToProps = reduxStore => ({
   ...reduxStore,
-  builder: reduxStore.add.showIntakeReducer,
+  show: reduxStore.add.showIntakeReducer,
 });
 export default connect(mapStateToProps)(BikeTableBase);
