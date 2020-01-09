@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
+import Button from '@material-ui/core/Button';
 import './BikeTable.css';
 
 
@@ -7,8 +10,8 @@ class BikeTableRow extends Component {
     render() {
         return (
             <TableRow>
-            <TableCell>{this.props.client.customers_full_name}</TableCell>
-            <TableCell>{this.props.client.phone_number}</TableCell>
+            <TableCell>{this.props.intake.brand}</TableCell>
+            <TableCell>{this.props.intake.builder}</TableCell>
             <TableCell> <Button variant="contained"
                 size="small"
                 onClick={this.editCust}
