@@ -9,8 +9,7 @@ import './BikeTable.css';
 class BikeTableRow extends Component {
     render() {
         return (
-            <div> 
-                {JSON.stringify(this.props.intake)}
+            
             
             <TableRow>
             <TableCell>{this.props.intake.brand}</TableCell>
@@ -38,7 +37,7 @@ class BikeTableRow extends Component {
             </TableCell>
 
         </TableRow>
-        </div>
+        
          )
     }
 }

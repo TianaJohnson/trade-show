@@ -40,7 +40,7 @@ class BikeTableBase extends Component {
               <TableCell>Builder</TableCell>
               <TableCell>Edit Customer Info</TableCell>
               <TableCell>View/Edit</TableCell>
-              <TableCell></TableCell>
+              <TableCell>Remove</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
