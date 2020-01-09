@@ -11,7 +11,7 @@ class BikeTableRow extends Component {
         return (
             <TableRow>
             <TableCell>{this.props.intake.brand}</TableCell>
-            <TableCell>{this.props.intake.builder}</TableCell>
+            <TableCell>{this.props.intake.last}</TableCell>
             <TableCell> <Button variant="contained"
                 size="small"
                 onClick={this.editCust}
