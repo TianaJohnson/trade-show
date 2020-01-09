@@ -9,9 +9,12 @@ import './BikeTable.css';
 class BikeTableRow extends Component {
     render() {
         return (
+            <div> 
+                {JSON.stringify(this.props.intake)}
+            
             <TableRow>
             <TableCell>{this.props.intake.brand}</TableCell>
-            <TableCell>{this.props.intake.last}</TableCell>
+            <TableCell>{this.props.intake.last_name}</TableCell>
             <TableCell> <Button variant="contained"
                 size="small"
                 onClick={this.editCust}
@@ -35,6 +38,7 @@ class BikeTableRow extends Component {
             </TableCell>
 
         </TableRow>
+        </div>
          )
     }
 }
