@@ -11,9 +11,9 @@ class AddNew extends Component {
         this.state = {
             show: '',
             location: '',
-            date: '',
-            first: '',
-            last: '',
+            show_date: '',
+            first_name: '',
+            last_name: '',
             state: '',
             city: '',
             country: '',
@@ -31,15 +31,15 @@ class AddNew extends Component {
     };
     this.props.dispatch(action);
     this.setState({
-        show: "",
-        location: "",
-        date: "",
-        first: "",
-        last: "",
-        state: "",
-        city: "",
-        country: "",
-        brand: ""
+        show: '',
+        location: '',
+        show_date: '',
+        first_name: '',
+        last_name: '',
+        state: '',
+        city: '',
+        country: '',
+        brand: ''
     });
     this.props.history.push("/");
   };
@@ -77,9 +77,9 @@ class AddNew extends Component {
                     <TextField id="outlined-basic" 
                             variant="outlined"
                             label="date"
-                            name="date"
+                            name="show_date"
                             style={{ marginLeft: 10 }}
-                            value={this.state.date}
+                            value={this.state.show_date}
                             onChange={this.handleChange}>
                     </TextField>
                     <br/>
@@ -89,17 +89,17 @@ class AddNew extends Component {
                         <h3>Builder Identification</h3>
                     <TextField id="outlined-basic" 
                                label="First Name" 
-                               name="first"
+                               name="first_name"
                                variant="outlined"
-                               value={this.state.first}
+                               value={this.state.first_name}
                                 onChange={this.handleChange}>
                     </TextField>
                     <TextField id="outlined-basic" 
                                variant="outlined"
                                label="Last Name"
-                               name="last"
+                               name="last_name"
                                style={{ marginLeft: 10 }}
-                               value={this.state.last}
+                               value={this.state.last_name}
                                 onChange={this.handleChange}>
                     </TextField>
                     <br/>
