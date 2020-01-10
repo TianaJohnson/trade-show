@@ -12,10 +12,8 @@ class BikeTableRow extends Component {
         console.log('in remove', event.currentTarget.value);
         const action = { type: 'DELETE_SHOW_INFO', payload: event.target.value }
         this.props.dispatch(action);
-        console.log('action', action);
-        this.fetchUserSharedWith();
-
-
+        console.log('delete action', action);
+        
     }
 
     render() {
@@ -39,7 +37,7 @@ class BikeTableRow extends Component {
             <TableCell> 
                 <Button variant="contained"
                     color="inherit"
-                    onClick={this.archiveCust}
+                    onClick={this.deleteInfo}
                     style={{ margin: 10 }}>
                     Delete
                 </Button>
