@@ -63,20 +63,20 @@ router.get('/show', (req, res) => {
 
          //D-delete
 
-         // add authentication 
-         router.delete('delete/:id', (req, res) => {
-             
-            let reqId = req.params.id;
-            console.log('Delete request for id', reqId);
-            let sqlText = 'DELETE FROM employees WHERE id=$1;';
-            pool.query(sqlText, [reqId])
-                .then((result) => {
-                    res.sendStatus(200);
-                })
-                .catch((error) => {
-                    console.log(`Error making database query ${sqlText}`, error);
-                    res.sendStatus(500); 
-                })
+         router.delete('/delete/:id', (req, res) => {
+            if (req.isAuthenticated()) {
+                console.log('in delete router', req.params.id);
+                const id = [req.params.id];
+                const queryText = `DELETE FROM "initial_intake"
+                            WHERE id=$1`
+                pool.query(queryText, id)
+                    .then((response) => { res.sendStatus(200); })
+                    .catch((error) => {
+                        res.sendStatus(500)
+                    })
+            } else {
+                res.sendStatus(403);
+            }
         })
          
 

@@ -27,10 +27,10 @@ function* addShow(action) {
 
   function* deleteShowInfo(action) {
     try{
-      const removeShow = action.payload
+      const removeShow = action.payload.id
       //const response = 
-      yield axios.delete(`/api/show/delete/${removeShow}`);
-      yield put({ type: 'FETCH_SHOW'}); // may need payload:response.data   
+      const response = yield axios.delete(`/api/show/delete/${removeShow}`);
+      yield put({ type: 'FETCH_SHOW', payload:response.data}); // may need payload:response.data   
     }catch(error){
       console.log('There is an error in show delete saga', error)
     }
