@@ -4,6 +4,7 @@ import { takeLatest,put } from 'redux-saga/effects';
 function* addShow(action) {
     try {
       const add = action.payload
+      console.log(add);
       yield axios.post(`/api/show/add`, add);
       yield alert('Show Information Added.')
       yield put({ type: 'FETCH_SHOW' });
@@ -26,9 +27,11 @@ function* addShow(action) {
 
   function* deleteShowInfo(action) {
     try{
-      const 
-      const response = yield axios.delete(`/api/show/delete/${action.payload.id}`, action.payload);
-      yield put({ type:})
+      const removeShow = action.payload
+      const response = yield axios.delete(`/api/show/delete/${removeShow}`);
+      yield put({ type: 'FETCH_SHOW'}); // may need payload:response.data   
+    }catch(error){
+      console.log('There is an erroe in show delete saga', error)
     }
   }
 
