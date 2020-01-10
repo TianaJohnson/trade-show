@@ -3,7 +3,8 @@ import { takeLatest,put } from 'redux-saga/effects';
 
 function* addShow(action) {
     try {
-      yield axios.post('/api/show/add', action.payload);
+      const add = action.payload
+      yield axios.post(`/api/show/add`, add);
       yield alert('Show Information Added.')
       yield put({ type: 'FETCH_SHOW' });
       console.log("Add Show Saga");
@@ -14,14 +15,22 @@ function* addShow(action) {
 
   function* fetchShow(action) {
     try{
-    const responseFromServer = yield axios.get('/api/show/show');
-    yield put({ type: 'SET_SHOW', payload: responseFromServer.data});
-    console.log('response from server is:',responseFromServer.data)
+    const response = yield axios.get(`/api/show/show`);
+    yield put({ type: 'SET_SHOW', payload: response.data});
+    console.log('response from server is:',response.data)
   } catch (error) {
     console.log('Unabale to fetch Show information from server', error);
     alert('Unabale to fetch customers from server', error);
   }
 }
+
+  function* deleteShowInfo(action) {
+    try{
+      const 
+      const response = yield axios.delete(`/api/show/delete/${action.payload.id}`, action.payload);
+      yield put({ type:})
+    }
+  }
 
   function* showIntakesaga() {
     yield takeLatest('ADD_SHOW', addShow);
