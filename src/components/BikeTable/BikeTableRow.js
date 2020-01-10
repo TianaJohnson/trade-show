@@ -9,8 +9,6 @@ import './BikeTable.css';
 class BikeTableRow extends Component {
     
     deleteInfo = (event) => {
-        
-        console.log('in remove', event.currentTarget.value);
         const action = { type: 'DELETE_SHOW_INFO', payload: this.props.intake.id }
         this.props.dispatch(action);
         console.log('delete action', action);
