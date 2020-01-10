@@ -28,16 +28,18 @@ function* addShow(action) {
   function* deleteShowInfo(action) {
     try{
       const removeShow = action.payload
-      const response = yield axios.delete(`/api/show/delete/${removeShow}`);
+      //const response = 
+      yield axios.delete(`/api/show/delete/${removeShow}`);
       yield put({ type: 'FETCH_SHOW'}); // may need payload:response.data   
     }catch(error){
-      console.log('There is an erroe in show delete saga', error)
+      console.log('There is an error in show delete saga', error)
     }
   }
 
   function* showIntakesaga() {
     yield takeLatest('ADD_SHOW', addShow);
     yield takeLatest('FETCH_SHOW', fetchShow);
+    yield takeLatest('DELETE_SHOW', deleteShowInfo);
     
   }
   export default showIntakesaga;
