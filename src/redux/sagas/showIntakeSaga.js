@@ -39,7 +39,7 @@ function* addShow(action) {
   function* showIntakesaga() {
     yield takeLatest('ADD_SHOW', addShow);
     yield takeLatest('FETCH_SHOW', fetchShow);
-    yield takeLatest('DELETE_SHOW', deleteShowInfo);
+    yield takeLatest('DELETE_SHOW_INFO', deleteShowInfo);
     
   }
   export default showIntakesaga;

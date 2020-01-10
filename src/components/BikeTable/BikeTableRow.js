@@ -7,8 +7,17 @@ import './BikeTable.css';
 
 
 class BikeTableRow extends Component {
-
     
+    deleteInfo = (event) => {
+        console.log('in remove', event.currentTarget.value);
+        const action = { type: 'DELETE_SHOW_INFO', payload: event.target.value }
+        this.props.dispatch(action);
+        console.log('action', action);
+        this.fetchUserSharedWith();
+
+
+    }
+
     render() {
         return (  
             <TableRow>
