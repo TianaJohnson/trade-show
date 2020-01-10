@@ -16,8 +16,7 @@ class BikeTableRow extends Component {
     }
 
     render() {
-        return (  <div>
-            {JSON.stringify(this.props.intake.id)}
+        return ( 
             <TableRow>
             <TableCell>{this.props.intake.brand}</TableCell>
             <TableCell>{this.props.intake.last_name}, {this.props.intake.first_name}</TableCell>
@@ -44,7 +43,7 @@ class BikeTableRow extends Component {
             </TableCell>
 
         </TableRow>
-        </div>
+        
          )
     }
 }
