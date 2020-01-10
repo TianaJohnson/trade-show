@@ -9,15 +9,17 @@ import './BikeTable.css';
 class BikeTableRow extends Component {
     
     deleteInfo = (event) => {
+        
         console.log('in remove', event.currentTarget.value);
-        const action = { type: 'DELETE_SHOW_INFO', payload: event.target.value }
+        const action = { type: 'DELETE_SHOW_INFO', payload: this.props.intake.id }
         this.props.dispatch(action);
         console.log('delete action', action);
         
     }
 
     render() {
-        return (  
+        return (  <div>
+            {JSON.stringify(this.props.intake.id)}
             <TableRow>
             <TableCell>{this.props.intake.brand}</TableCell>
             <TableCell>{this.props.intake.last_name}, {this.props.intake.first_name}</TableCell>
@@ -44,7 +46,7 @@ class BikeTableRow extends Component {
             </TableCell>
 
         </TableRow>
-        
+        </div>
          )
     }
 }
