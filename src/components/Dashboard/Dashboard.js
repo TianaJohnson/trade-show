@@ -7,6 +7,8 @@ import BikeTable from '../BikeTable/BikeTableBase';
 import './Dashboard.css';
 
 class Dashboard extends Component {
+    
+   
 
     addNew = () => {
         this.props.history.push('/add');
@@ -26,7 +28,7 @@ class Dashboard extends Component {
                     That new new
                     </Button>
                     <br/>
-                    <BikeTable match={this.props.match} history={this.props.history}/>
+                    <BikeTable key={this.props.id} match={this.props.match} history={this.props.history}/>
                 </Card>
                 <br/>
             </div>

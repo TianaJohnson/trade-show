@@ -7,6 +7,8 @@ import './BikeTable.css';
 
 
 class BikeTableRow extends Component {
+
+    componentDidMount
     
     deleteInfo = (event) => {
         const action = { type: 'DELETE_SHOW_INFO', payload: this.props.intake.id }
