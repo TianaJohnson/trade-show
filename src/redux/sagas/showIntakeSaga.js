@@ -25,15 +25,15 @@ function* addShow(action) {
   }
 }
 
-  function* deleteShowInfo(action) {
-    try{
-      
-      yield axios.delete(`/api/show/delete/${action.payload.id}`, action.payoad);
-      yield put({ type: 'FETCH_SHOW'}); // may need payload:response.data   
-    }catch(error){
-      console.log('There is an error in show delete saga', error)
-    }
-  }
+function* deleteShowInfo(action) {
+  console.log('In saga archive delete', action.payload.id)
+  try {
+    yield axios.put(`/intake/archive/${action.payload.id}`, action.payload);
+    yield alert('Customer Deleted.')
+    yield put({ type: 'FETCH_CUSTOMER' });
+  }catch(error){
+    console.log('Unable to delete customer info', error);
+    alert('Unable to delete customer information', error);
 
   function* showIntakesaga() {
     yield takeLatest('ADD_SHOW', addShow);

@@ -24,14 +24,12 @@ class BikeTableRow extends Component {
             <TableCell>{this.props.intake.last_name}, {this.props.intake.first_name}</TableCell>
             <TableCell> <Button variant="contained"
                 size="small"
-                onClick={this.editCust}
                 color="primary"
                 style={{ margin: 10 }}>
                 Edit
             </Button></TableCell>
             <TableCell><Button variant="contained"
                     color="secondary"
-                    onClick={this.custFile}
                     style={{ margin: 10 }}>
                     Customer File
             </Button></TableCell>
