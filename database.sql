@@ -17,7 +17,8 @@ CREATE TABLE "initial_intake" (
 	"state" VARCHAR (20),
 	"city" VARCHAR (30),
 	"country" VARCHAR (40),
-	"brand" VARCHAR (200)
+	"brand" VARCHAR (200),
+	"remove" BOOLEAN DEFAULT TRUE
 	);
 
 
