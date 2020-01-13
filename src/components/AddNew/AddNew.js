@@ -59,14 +59,14 @@ class AddNew extends Component {
                     <div className="new-build-form">
                         <h1>Show Information</h1>
                     <div className="new-input-fields">  
-                    <TextField id="outlined-basic" 
+                    <TextField id="showIntake" 
                             label="Show" 
                             name="show"
                             variant="outlined"
                             value={this.state.show}
                             onChange={this.handleChange}>
                     </TextField>
-                    <TextField id="outlined-basic" 
+                    <TextField id="locationIntake" 
                             variant="outlined"
                             label="Location"
                             name="location"
@@ -74,7 +74,7 @@ class AddNew extends Component {
                             value={this.state.location}
                             onChange={this.handleChange}>
                     </TextField>
-                    <TextField id="outlined-basic" 
+                    <TextField id="showDateIntake" 
                             variant="outlined"
                             label="date"
                             name="show_date"
@@ -87,14 +87,14 @@ class AddNew extends Component {
                         <h2>New Builder Information</h2>
                         
                         <h3>Builder Identification</h3>
-                    <TextField id="outlined-basic" 
+                    <TextField id="firstNameIntake" 
                                label="First Name" 
                                name="first_name"
                                variant="outlined"
                                value={this.state.first_name}
                                 onChange={this.handleChange}>
                     </TextField>
-                    <TextField id="outlined-basic" 
+                    <TextField id="lastNameIntake" 
                                variant="outlined"
                                label="Last Name"
                                name="last_name"
@@ -105,14 +105,14 @@ class AddNew extends Component {
                     <br/>
                     <br/>
                     <h3> Where are they outta?</h3>
-                    <TextField id="outlined-basic" 
+                    <TextField id="stateIntake" 
                                variant="outlined"
                                label="State"
                                name="state"
                                value={this.state.state}
                                onChange={this.handleChange}>
                     </TextField>
-                    <TextField id="outlined-basic" 
+                    <TextField id="cityIntake" 
                                variant="outlined"
                                label="City/Providence"
                                name="city"
@@ -120,7 +120,7 @@ class AddNew extends Component {
                                value={this.state.city}
                                onChange={this.handleChange}>
                     </TextField>
-                    <TextField id="outlined-basic" 
+                    <TextField id="countryIntake" 
                                variant="outlined"
                                label="Country"
                                name="country"
@@ -130,7 +130,7 @@ class AddNew extends Component {
                     </TextField>
                     <br/>
                     <h3>Whats the Brand?</h3>
-                    <TextField id="outlined-basic" 
+                    <TextField id="brandIntake" 
                                variant="outlined"
                                label="Brand Name"
                                name="brand"

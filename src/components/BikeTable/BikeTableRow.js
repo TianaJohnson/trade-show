@@ -11,7 +11,11 @@ class BikeTableRow extends Component {
 
     
     deleteInfo = (event) => {
-        const action = { type: 'DELETE_SHOW_INFO', payload: this.props.intake.id }
+        const action = {
+             type: 'DELETE_SHOW_INFO',
+             payload:{
+                  id:this.props.intake.id },
+                };
         this.props.dispatch(action);
         console.log('delete action', action);
         
