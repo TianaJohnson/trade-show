@@ -8,14 +8,26 @@ import './BikeTable.css';
 
 class BikeTableRow extends Component {
 
-    componentDidMount
+    constructor(props){
+        super(props);
+        this.state = {
+            is_active: true,
+        }
+    }
+
     
     deleteInfo = (event) => {
-        const action = { type: 'DELETE_SHOW_INFO', payload: this.props.intake.id }
+        console.log('Removing show info');
+        const action = {
+            type: 'DELETE_SHOW_INFO',
+            payload: {
+                        is_active: false, id:this.props.intake.id,
+                    },
+        };
+        console.log('archived!!!!')
         this.props.dispatch(action);
-        console.log('delete action', action);
-        
-    }
+        // this.props.history.push('/home')
+    } 
 
     render() {
         return ( 
