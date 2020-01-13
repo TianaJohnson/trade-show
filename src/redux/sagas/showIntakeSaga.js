@@ -24,7 +24,7 @@ function* addShow(action) {
     alert('Unabale to fetch customers from server', error);
   }
 }
-//why do i fight with this
+
 function* deleteShowInfo(action) {
   console.log('In saga archive delete', action.payload.id)
   try {
