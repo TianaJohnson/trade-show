@@ -67,8 +67,7 @@ router.get('/show', (req, res) => {
             if (req.isAuthenticated()) {
                 console.log('in delete router', req.params.id);
                 const id = [req.params.id];
-                const queryText = `DELETE FROM "initial_intake"
-                            WHERE id=$1`
+                const queryText = `DELETE FROM "initial_intake" WHERE "id" = $1`
                 pool.query(queryText, id)
                     .then((response) => { res.sendStatus(200); })
                     .catch((error) => {
