@@ -8,6 +8,8 @@ import './BikeTable.css';
 
 class BikeTableRow extends Component {
 
+   
+
     deleteInfo = (event) => {
         const action = {
              type: 'DELETE_SHOW_INFO',
