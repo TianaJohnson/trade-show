@@ -6,3 +6,13 @@
         padding: 25px;
         border-radius: 2px;
 }
+
+.log-in {
+        background-color: #a74099;
+        border-radius: 4px;
+        color: #f8f8f8;
+        min-height: 50px;
+        min-width: 100px;
+        outline:0;
+        cursor: pointer;
+}

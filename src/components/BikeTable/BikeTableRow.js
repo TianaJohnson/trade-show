@@ -41,7 +41,7 @@ class BikeTableRow extends Component {
                     color="inherit"
                     onClick={this.deleteInfo}
                     style={{ margin: 10 }}>
-                    Delete
+                    x
                 </Button>
             </TableCell>
 
