@@ -8,7 +8,7 @@
 }
 
 .log-in {
-        background-color: #a74099;
+        background-color: #b1369e;
         border-radius: 4px;
         color: #f8f8f8;
         min-height: 50px;
@@ -16,3 +16,8 @@
         outline:0;
         cursor: pointer;
 }
+
+.log-in:hover{
+        background-color: #c3d330;
+        color:black;
+      }

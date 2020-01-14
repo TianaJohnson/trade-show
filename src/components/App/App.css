@@ -35,7 +35,7 @@ input {
 }
 
 /* Same with these */
-.log-in:hover, .log-out:hover, .register:hover {
+.log-out:hover, .register:hover {
   background-color: #008183;
 }
 
