@@ -2,7 +2,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: auto;
-    background-color: chartreuse;
+    background-color:lightslategray;
+    min-height: 850px;
 }
 
 .dash-card {
