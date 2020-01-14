@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import UserHeader from '../UserHeader/UserHeader';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
@@ -8,7 +8,9 @@ import './Dashboard.css';
 
 class Dashboard extends Component {
     
-   
+     componentDidMount() {
+    this.props.dispatch({ type: 'FETCH_SHOW', payload: { id: this.props.match.params.id } });    
+  }
 
     addNew = () => {
         this.props.history.push('/add');
@@ -35,5 +37,8 @@ class Dashboard extends Component {
         )
     }
 }
+const mapStateToProps = reduxStore => {
+    return { reduxStore: reduxStore };
+    }
 
-export default Dashboard;
+export default connect(mapStateToProps)(Dashboard);
