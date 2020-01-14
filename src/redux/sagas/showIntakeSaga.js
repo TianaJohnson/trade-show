@@ -30,8 +30,7 @@ function* deleteShowInfo(action) {
   try {
     const remove = yield axios.delete(`/api/show/delete/${action.payload.id}`)
     yield alert('Customer Deleted.')
-    yield put({ type: 'FETCH_CUSTOMER', payload: remove.data });
-    
+    yield put({ type: 'FETCH_SHOW', payload: remove.data });
   }catch(error){
     console.log('Unable to delete customer info', error);
     alert('Unable to delete customer information', error);
