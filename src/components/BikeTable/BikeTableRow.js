@@ -8,17 +8,14 @@ import './BikeTable.css';
 
 class BikeTableRow extends Component {
 
-
-    
     deleteInfo = (event) => {
         const action = {
              type: 'DELETE_SHOW_INFO',
              payload:{
                   id:this.props.intake.id },
                 };
-        this.props.dispatch(action);
-        console.log('delete action', action);
-        
+                console.log('delete action', action);
+        this.props.dispatch(action);     
     }
 
     render() {
