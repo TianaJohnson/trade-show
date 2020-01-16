@@ -13,7 +13,7 @@ import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
-import AboutPage from '../AboutPage/AboutPage';
+import AboutPage from '../analytics/analytics';
 import Dashboard from '../Dashboard/Dashboard';
 import AddNew from '../AddNew/AddNew';
 //import UserHeader from '../UserHeader/UserHeader';
@@ -35,10 +35,10 @@ class App extends Component {
             <Redirect exact from="/" to="/home" />
             {/* Visiting localhost:3000/about will show the about page.
             This is a route anyone can see, no login necessary */}
-            <Route
+            <ProtectedRoute
               exact
-              path="/about"
-              component={AboutPage}
+              path="/analytics"
+              component={analytics}
             />
             {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/home will show the UserPage if the user is logged in.
