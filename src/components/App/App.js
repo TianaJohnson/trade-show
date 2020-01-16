@@ -13,7 +13,7 @@ import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
-import AboutPage from '../analytics/analytics';
+import Analytics from '../Analytics/Analytics';
 import Dashboard from '../Dashboard/Dashboard';
 import AddNew from '../AddNew/AddNew';
 //import UserHeader from '../UserHeader/UserHeader';
@@ -38,7 +38,7 @@ class App extends Component {
             <ProtectedRoute
               exact
               path="/analytics"
-              component={analytics}
+              component={Analytics}
             />
             {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/home will show the UserPage if the user is logged in.

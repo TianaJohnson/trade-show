@@ -6,7 +6,7 @@ const Analytics = () => (
   <div>
     <div>
       <p>
-       
+       More to come.
       </p>
     </div>
   </div>
