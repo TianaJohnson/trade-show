@@ -16,7 +16,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 import Analytics from '../Analytics/Analytics';
 import Dashboard from '../Dashboard/Dashboard';
 import AddNew from '../AddNew/AddNew';
-//import UserHeader from '../UserHeader/UserHeader';
+import Main from '../MainPage/Main';
 
 import './App.css';
 
@@ -40,12 +40,12 @@ class App extends Component {
               path="/analytics"
               component={Analytics}
             />
-            {/* For protected routes, the view could show one of several things on the same route.
-            Visiting localhost:3000/home will show the UserPage if the user is logged in.
-            If the user is not logged in, the ProtectedRoute will show the 'Login' or 'Register' page.
-            Even though it seems like they are different pages, the user is always on localhost:3000/home */}
-
-            {/* This will be changed to a diffrent page  */}
+            {/* may become home page, just a test */}
+            <ProtectedRoute
+              exact
+              path="/main"
+              component={Main}
+            />
             <ProtectedRoute
               exact
               path="/home"

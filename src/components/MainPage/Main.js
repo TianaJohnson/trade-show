@@ -8,9 +8,18 @@ class Main extends Component {
     render() {
         return (
             <div className="main-div">
+                <br/>
                 <Card className="main-card">
-
+                    {/* Will be linked to show id files */}
+                <Button color="primary"
+                        variant="contained" 
+                        //className="newsh-btn"
+                        style={{ margin: 10 }}>
+                            New Show
+                            </Button>
+                
                 </Card>
+                <br/>
             </div>
          )
     }

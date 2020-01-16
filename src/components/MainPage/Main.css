@@ -1,0 +1,14 @@
+.main-card {
+    margin: 20px;
+    min-height: 400px;
+}
+
+.main-div {
+    background-color: blue;
+}
+
+.newsh-btn{
+    margin:20px;
+    background-color: crimson;
+    color: black;
+}
