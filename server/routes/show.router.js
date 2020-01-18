@@ -11,13 +11,10 @@ router.post('/add', (req, res, next) => {
         ("show",
         "location",
         "show_date",
-        "first_name",
-        "last_name",
         "state",
         "city",
-        "country",
-        "brand")
-        VALUES ( $1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id";`
+        "country"
+        VALUES ( $1, $2, $3, $4, $5, $6) RETURNING "id";`
         pool.query(queryText, [req.body.show,
                                  req.body.location,
                                  req.body.show_date,
