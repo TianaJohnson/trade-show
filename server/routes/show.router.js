@@ -22,8 +22,19 @@ router.post('/add', (req, res, next) => {
                                  req.body.state,
                                  req.body.country
                                  ])
-                                 .then(() => {
-                                    res.sendStatus(201);
+                                 .then((results) => {
+                                    // Insert empty project for new customer
+                                    const anotherQuery = `INSERT INTO "builder_intake"
+                                         ("show_id") 
+                                          VALUES ($1);`;
+                                    pool.query(anotherQuery, [results.rows[0].id,
+                                    req.user.id]).then(() => {
+                                        console.log('insered into builder intake database');
+                                        res.sendStatus(201);
+                                    }).catch(error => {
+                                        res.sendStatus(500);
+                                    })
+                    
                                 }).catch((error) => {
                                     console.log('Something went wrong in POST new product', error);
                                     res.sendStatus(500);
