@@ -33,7 +33,7 @@ router.post('/add', (req, res, next) => {
                                         res.sendStatus(201);
                                     })
                                 }).catch((error) => {
-                                    console.log('Something went wrong in POST new product', error);
+                                    console.log('Something went wrong in builder insert', error);
                                     res.sendStatus(500);
                                 });
                             } else {
