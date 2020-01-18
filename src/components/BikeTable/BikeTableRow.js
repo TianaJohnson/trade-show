@@ -23,8 +23,8 @@ class BikeTableRow extends Component {
     render() {
         return ( 
             <TableRow>
-            <TableCell>{this.props.intake.brand}</TableCell>
-            <TableCell>{this.props.intake.last_name}, {this.props.intake.first_name}</TableCell>
+            <TableCell>{this.props.intake.show}</TableCell>
+            <TableCell>{this.props.intake.show_date}, {this.props.intake.first_name}</TableCell>
             <TableCell> <Button variant="contained"
                 size="small"
                 color="primary"

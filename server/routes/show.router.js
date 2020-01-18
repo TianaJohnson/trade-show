@@ -29,15 +29,18 @@ router.post('/add', (req, res, next) => {
                                           VALUES ($1);`;
                                     pool.query(anotherQuery, [results.rows[0].id,
                                     req.user.id]).then(() => {
-                                        console.log('insered into builder intake database');
+                                        console.log('server side builder intake Post');
                                         res.sendStatus(201);
+                                    }).catch(error => {
+                                        res.sendStatus(500);
                                     })
-                                }).catch((error) => {
-                                    console.log('Something went wrong in builder insert', error);
+                    
+                                })
+                                .catch((error) => {
+                                    console.log('Something went wrong in builder intake', error);
+                    
                                     res.sendStatus(500);
                                 });
-                            } else {
-                                res.sendStatus(403);
                             }
                         
     });
