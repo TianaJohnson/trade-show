@@ -20,10 +20,13 @@ CREATE TABLE "show_intake" (
 -- builder intake
 CREATE TABLE "builder_intake" (
 	"id" SERIAL PRIMARY KEY,
-	"show_id" INT REFERENCES "show_intake",
+	"show_id" INT REFERENCES "show_intake"("id"),
 	"brand" VARCHAR (200),
 	"first_name" VARCHAR (100),
-	"last_name" VARCHAR (100)
+	"last_name" VARCHAR (100), 
+	"build_city" VARCHAR (30),
+	"build_state" VARCHAR (30),
+	"build_country" VARCHAR (50)
 	);
 
 -- bike intake
