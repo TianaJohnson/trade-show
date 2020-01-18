@@ -31,10 +31,7 @@ router.post('/add', (req, res, next) => {
                                     req.user.id]).then(() => {
                                         console.log('insered into builder intake database');
                                         res.sendStatus(201);
-                                    }).catch(error => {
-                                        res.sendStatus(500);
                                     })
-                    
                                 }).catch((error) => {
                                     console.log('Something went wrong in POST new product', error);
                                     res.sendStatus(500);
