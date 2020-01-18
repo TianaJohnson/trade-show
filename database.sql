@@ -31,16 +31,20 @@ CREATE TABLE "builder_intake" (
 CREATE TABLE "bike_intake" (
 	"id" SERIAL PRIMARY KEY,
 	"builder_id" INT REFERENCES "builder_intake"("id"),
+	"main_mat" VARCHAR (30),
 	"bike_type" VARCHAR (100),
 	"wheel_size" VARCHAR (20),
-	"tire_size" VARCHAR (20)
+	"tire_size" VARCHAR (20),
 	"axle_type" VARCHAR (30),
 	"brake_type" VARCHAR (30),
 	"drive_train" VARCHAR (30),
+	"fork_mat" VARCHAR (30),
 	"fork_build" VARCHAR (30),
 	"notes" VARCHAR (400),
 	"main_comp_brand" VARCHAR (200),
 		);
+
+		
 
 
 
