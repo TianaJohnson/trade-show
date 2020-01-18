@@ -7,7 +7,7 @@ const router = express.Router();
 router.post('/add', (req, res, next) => {
         console.log(req.body);
    if (req.isAuthenticated()) {
-        const queryText = ` INSERT INTO "initial_intake"
+        const queryText = ` INSERT INTO "show_intake"
         ("show",
         "location",
         "show_date",
@@ -39,7 +39,7 @@ router.get('/show', (req, res) => {
     console.log('In show information git');
     if (req.isAuthenticated()) {
         console.log('req.user:', req.user);
-        pool.query(`SELECT * FROM "initial_intake" 
+        pool.query(`SELECT * FROM "show_intake" 
                     ORDER BY "id" DESC;`)
                     .then( results => {
                         console.log(results.rows)
@@ -61,7 +61,7 @@ router.get('/show', (req, res) => {
             if (req.isAuthenticated()) {
                 console.log('in delete router', req.params.id);
                 const id = [req.params.id];
-                const queryText = `DELETE FROM "initial_intake" WHERE "id" = $1`
+                const queryText = `DELETE FROM "show_intake" WHERE "id" = $1`
                 pool.query(queryText, id)
                     .then((response) => { res.sendStatus(200); })
                     .catch((error) => {
