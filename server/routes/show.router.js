@@ -18,12 +18,9 @@ router.post('/add', (req, res, next) => {
         pool.query(queryText, [req.body.show,
                                  req.body.location,
                                  req.body.show_date,
-                                 req.body.first_name,
-                                 req.body.last_name,
                                  req.body.city,
                                  req.body.state,
-                                 req.body.country,
-                                 req.body.brand
+                                 req.body.country
                                  ])
                                  .then(() => {
                                     res.sendStatus(201);
