@@ -9,21 +9,19 @@ router.post('/add', (req, res, next) => {
    if (req.isAuthenticated()) {
         const queryText = ` INSERT INTO "show_intake"
         ("show",
-        "location",
         "show_date",
         "state",
         "city",
-        "country"
-        VALUES ( $1, $2, $3, $4, $5, $6) RETURNING "id";`
+        "country")
+        VALUES ( $1, $2, $3, $4, $5) RETURNING "id";`
         pool.query(queryText, [req.body.show,
-                                 req.body.location,
                                  req.body.show_date,
-                                 req.body.city,
                                  req.body.state,
+                                 req.body.city,
                                  req.body.country
                                  ])
                                  .catch((error) => {
-                                    console.log('Something went wrong in POST new product', error);
+                                    console.log('Something went wrong in POST new show', error);
                                     res.sendStatus(500);
                                 });
                             } else {
@@ -32,26 +30,26 @@ router.post('/add', (req, res, next) => {
                         
     });
 
-//     //R-Read
-// router.get('/show', (req, res) => {
-//     console.log('In show information git');
-//     if (req.isAuthenticated()) {
-//         console.log('req.user:', req.user);
-//         pool.query(`SELECT * FROM "show_intake" 
-//                     ORDER BY "id" DESC;`)
-//                     .then( results => {
-//                         console.log(results.rows)
-//                         res.send(results.rows)
-//                     })
-//                     .catch(error => {
-//                         console.log('Error making SELECT for initial-intake database:', error);
-//                         res.sendStatus(500);
-//                     });
-//                     } else {
-//                         // They are not authenticated.
-//                         res.sendStatus(403);
-//                 }
-//          });
+    //R-Read
+router.get('/show', (req, res) => {
+    console.log('In show information git');
+    if (req.isAuthenticated()) {
+        console.log('req.user:', req.user);
+        pool.query(`SELECT * FROM "show_intake" 
+                    ORDER BY "id" DESC;`)
+                    .then( results => {
+                        console.log(results.rows)
+                        res.send(results.rows)
+                    })
+                    .catch(error => {
+                        console.log('Error making SELECT for initial-intake database:', error);
+                        res.sendStatus(500);
+                    });
+                    } else {
+                        // They are not authenticated.
+                        res.sendStatus(403);
+                }
+         });
 
 //          //D-delete
 

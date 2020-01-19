@@ -31,8 +31,8 @@ class BikeTableBase extends Component {
         <Table className="main-table">
           <TableHead>
             <TableRow>
-              <TableCell>Brand</TableCell>
-              <TableCell>Builder</TableCell>
+              <TableCell>show</TableCell>
+              <TableCell>Location</TableCell>
               <TableCell>Edit Customer Info</TableCell>
               <TableCell>View Customer File</TableCell>
               <TableCell>Delete</TableCell>
