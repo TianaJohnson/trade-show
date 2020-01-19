@@ -6,7 +6,7 @@ const router = express.Router();
 router.post('/builder', (req, res, next) => {
     console.log(req.body);
 if (req.isAuthenticated()) {
-    const queryText = ` INSERT INTO "show_intake"
+    const queryText = ` INSERT INTO "bulder_intake"
     ("brand",
     "first_name",
     "last_name",
