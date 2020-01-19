@@ -55,7 +55,7 @@ class App extends Component {
             they will see the info page instead. */}
             <ProtectedRoute
               exact
-              path="/add"
+              path="/show"
               component={AddShow}
             />
             {/* If none of the other routes matched, we will show a 404. */}

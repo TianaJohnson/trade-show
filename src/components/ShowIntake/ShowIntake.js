@@ -47,6 +47,7 @@ class ShowIntake extends Component {
                             label="Show" 
                             name="show"
                             variant="outlined"
+                            style={{ marginLeft: 10 }}
                             value={this.state.show}
                             onChange={this.handleChange}>
                     </TextField>
@@ -62,6 +63,7 @@ class ShowIntake extends Component {
                                variant="outlined"
                                label="State"
                                name="state"
+                               style={{ marginLeft: 10 }}
                                value={this.state.state}
                                onChange={this.handleChange}>
                     </TextField>
@@ -86,7 +88,7 @@ class ShowIntake extends Component {
                     <Button variant="contained" 
                             color="secondary"
                             onClick={this.addShow}
-                            style={{ marginTop: 10 }}>
+                            style={{ margin: 10}}>
                     Add Builder!
                     </Button>
                     <br/>
