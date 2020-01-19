@@ -3,8 +3,14 @@ import { connect } from 'react-redux';
 import './BuilderIntake.css';
 
 class BuilerIntake extends Component {
+
+
+
+
     render() {
+
         return (
+            
             <div>
                 
             </div>
