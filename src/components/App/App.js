@@ -15,7 +15,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
 import Analytics from '../Analytics/Analytics';
 import Dashboard from '../Dashboard/Dashboard';
-import AddNew from '../AddNew/AddNew';
+import AddShow from '../ShowIntake/ShowIntake';
 import Main from '../MainPage/Main';
 
 import './App.css';
@@ -56,7 +56,7 @@ class App extends Component {
             <ProtectedRoute
               exact
               path="/add"
-              component={AddNew}
+              component={AddShow}
             />
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />

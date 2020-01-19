@@ -14,8 +14,7 @@ class ShowIntake extends Component {
             state: '',
             city: '',
             country: '',
-        }
-        
+        }      
     }
 
   //Send to saga to create a customer in the data base
@@ -35,6 +34,7 @@ class ShowIntake extends Component {
     });
     this.props.history.push("/");
   };
+
 
     render() {
         return (
@@ -58,8 +58,6 @@ class ShowIntake extends Component {
                             value={this.state.show_date}
                             onChange={this.handleChange}>
                     </TextField>
-                    <br/>
-                    <h3> Where are they outta?</h3>
                     <TextField id="stateIntake" 
                                variant="outlined"
                                label="State"
