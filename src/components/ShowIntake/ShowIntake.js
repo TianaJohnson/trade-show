@@ -3,14 +3,13 @@ import { connect } from 'react-redux';
 import Card from '@material-ui/core/Card';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import './AddNew.css';
 
-class AddNew extends Component {
+class ShowIntake extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
             show: '',
-            location: '',
             show_date: '',
             state: '',
             city: '',
@@ -29,7 +28,6 @@ class AddNew extends Component {
     this.props.dispatch(action);
     this.setState({
         show: '',
-        location: '',
         show_date: '',
         state: '',
         city: '',
@@ -37,14 +35,6 @@ class AddNew extends Component {
     });
     this.props.history.push("/");
   };
-
-  handleChange = (evt) => {
-    this.setState({ [evt.target.name]: evt.target.value });
-
-    console.log(evt.target.name, ': ' , evt.target.value);
-    // ^ This shows what name(state) we are updating in each input
-    // and what the actual intake is.
-    }
 
     render() {
         return (
@@ -60,14 +50,6 @@ class AddNew extends Component {
                             value={this.state.show}
                             onChange={this.handleChange}>
                     </TextField>
-                    <TextField id="locationIntake" 
-                            variant="outlined"
-                            label="Location"
-                            name="location"
-                            style={{ marginLeft: 10 }}
-                            value={this.state.location}
-                            onChange={this.handleChange}>
-                    </TextField>
                     <TextField id="showDateIntake" 
                             variant="outlined"
                             label="date"
@@ -76,27 +58,6 @@ class AddNew extends Component {
                             value={this.state.show_date}
                             onChange={this.handleChange}>
                     </TextField>
-                    <br/>
-                    <br/>
-                        <h2>New Builder Information</h2>
-                        
-                        <h3>Builder Identification</h3>
-                    <TextField id="firstNameIntake" 
-                               label="First Name" 
-                               name="first_name"
-                               variant="outlined"
-                               value={this.state.first_name}
-                                onChange={this.handleChange}>
-                    </TextField>
-                    <TextField id="lastNameIntake" 
-                               variant="outlined"
-                               label="Last Name"
-                               name="last_name"
-                               style={{ marginLeft: 10 }}
-                               value={this.state.last_name}
-                                onChange={this.handleChange}>
-                    </TextField>
-                    <br/>
                     <br/>
                     <h3> Where are they outta?</h3>
                     <TextField id="stateIntake" 
@@ -122,15 +83,6 @@ class AddNew extends Component {
                                value={this.state.country}
                                onChange={this.handleChange}>
                     </TextField>
-                    <br/>
-                    <h3>Whats the Brand?</h3>
-                    <TextField id="brandIntake" 
-                               variant="outlined"
-                               label="Brand Name"
-                               name="brand"
-                               value={this.state.brand}
-                            onChange={this.handleChange}>
-                    </TextField>
                     </div>
                     <br/>
                     <Button variant="contained" 
@@ -149,4 +101,4 @@ class AddNew extends Component {
 const mapStateToProps = reduxStore => {
     return { reduxStore: reduxStore };
     }
-export default connect(mapStateToProps)(AddNew);
+export default connect(mapStateToProps)(ShowIntake);
