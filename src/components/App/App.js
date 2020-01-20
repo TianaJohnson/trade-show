@@ -44,11 +44,6 @@ class App extends Component {
             {/* may become home page, just a test */}
             <ProtectedRoute
               exact
-              path="/main"
-              component={Main}
-            />
-            <ProtectedRoute
-              exact
               path="/home"
               component={Dashboard}
             />
@@ -59,11 +54,7 @@ class App extends Component {
               path="/add"
               component={AddShow}
             />
-            {/* <ProtectedRoute
-              exact
-              path="/show/:id"
-              component={ShowDash}
-            /> */}
+            
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
           </Switch>
