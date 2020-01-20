@@ -33,7 +33,9 @@ class BikeTableBase extends Component {
             <TableRow>
               <TableCell>show</TableCell>
               <TableCell>Location</TableCell>
+              <TableCell>Show Date</TableCell>
               <TableCell>View Customer File</TableCell>
+              <TableCell>Remove Show</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

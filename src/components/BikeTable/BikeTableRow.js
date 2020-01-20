@@ -33,6 +33,13 @@ class BikeTableRow extends Component {
                     style={{ margin: 10 }}>
                     Customer File
             </Button></TableCell>
+            <TableCell>
+            <Button variant="contained"
+                    color="primary"
+                    style={{ margin: 10 }}>
+                    x
+            </Button>
+            </TableCell>
             <TableCell> 
             </TableCell>
 
