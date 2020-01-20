@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 
 
-class BuilderDash extends Component {
+class BuildDash extends Component {
     render() {
         return (
             <div>
@@ -22,4 +22,4 @@ class BuilderDash extends Component {
 const mapStateToProps = reduxStore => {
     return { reduxStore: reduxStore };
     }
-export default connect(mapStateToProps)(BuilderDash);
+export default connect(mapStateToProps)(BuildDash);
