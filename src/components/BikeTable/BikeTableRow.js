@@ -24,25 +24,14 @@ class BikeTableRow extends Component {
         return ( 
             <TableRow>
             <TableCell>{this.props.intake.show}</TableCell>
-            <TableCell>{this.props.intake.city}, {this.props.intake.first_name}</TableCell>
-            <TableCell> <Button variant="contained"
-                size="small"
-                color="primary"
-                style={{ margin: 10 }}>
-                Edit
-            </Button></TableCell>
+            <TableCell>{this.props.intake.city}, {this.props.intake.state}</TableCell>   
+            <TableCell>{this.props.intake.show_date}</TableCell>     
             <TableCell><Button variant="contained"
                     color="secondary"
                     style={{ margin: 10 }}>
                     Customer File
             </Button></TableCell>
             <TableCell> 
-                <Button variant="contained"
-                    color="inherit"
-                    onClick={this.deleteInfo}
-                    style={{ margin: 10 }}>
-                    x
-                </Button>
             </TableCell>
 
         </TableRow>
