@@ -24,7 +24,7 @@ class Dashboard extends Component {
                             color="primary"
                             onClick={this.addNew}
                             style={{ margin: 10 }}>
-                    That new new
+                    New Show
                     </Button>
                     <br/>
                     <BikeTable key={this.props.id} match={this.props.match} history={this.props.history}/>
