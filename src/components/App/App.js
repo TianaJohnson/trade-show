@@ -16,8 +16,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 import Analytics from '../Analytics/Analytics';
 import Dashboard from '../Dashboard/Dashboard';
 import AddShow from '../ShowIntake/ShowIntake';
-import Main from '../MainPage/Main';
-//import ShowDash from ''
+//import ShowDash from '../ShowDash/Showdash':
 
 import './App.css';
 
@@ -53,6 +52,11 @@ class App extends Component {
               exact
               path="/add"
               component={AddShow}
+            />
+            <ProtectedRoute
+              exact
+              path="/show/:id"
+              component={ShowDash}
             />
             
             {/* If none of the other routes matched, we will show a 404. */}
