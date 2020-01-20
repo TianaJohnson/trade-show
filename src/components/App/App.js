@@ -17,6 +17,7 @@ import Analytics from '../Analytics/Analytics';
 import Dashboard from '../Dashboard/Dashboard';
 import AddShow from '../ShowIntake/ShowIntake';
 import Main from '../MainPage/Main';
+//import ShowDash from ''
 
 import './App.css';
 
@@ -58,11 +59,11 @@ class App extends Component {
               path="/add"
               component={AddShow}
             />
-            <ProtectedRoute
+            {/* <ProtectedRoute
               exact
               path="/show/:id"
-              component={show}
-            />
+              component={ShowDash}
+            /> */}
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
           </Switch>
