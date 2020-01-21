@@ -20,7 +20,20 @@ router.post('/add', (req, res, next) => {
                                  req.body.city,
                                  req.body.country
                                  ])
-                                 .catch((error) => {
+                                 .then((results) => {
+                                    // Insert empty project for new customer
+                                    const anotherQuery = `INSERT INTO "builder_intake"
+                                         ("show_id") 
+                                          VALUES ($1);`;
+                                    pool.query(anotherQuery, [results.rows[0].id,
+                                    req.user.id]).then(() => {
+                                        console.log('server side intake Post');
+                                        res.sendStatus(201);
+                                    }).catch(error => {
+                                        res.sendStatus(500);
+                                    })
+                    
+                                }).catch((error) => {
                                     console.log('Something went wrong in POST new show', error);
                                     res.sendStatus(500);
                                 });

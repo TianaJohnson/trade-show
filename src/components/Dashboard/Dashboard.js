@@ -10,7 +10,7 @@ class Dashboard extends Component {
     
 
     addNew = () => {
-        this.props.history.push('/show');
+        this.props.history.push('/add');
       }
 
     render(){
