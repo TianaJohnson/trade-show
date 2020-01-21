@@ -14,9 +14,9 @@ import "./BikeTable.css";
 
 class BikeTableBase extends Component {
 
-  componentDidMount() {
-    this.props.dispatch({ type: 'FETCH_SHOW', payload: { id: this.props.match.params.id } });    
-  }
+  // componentDidMount() {
+  //   this.props.dispatch({ type: 'FETCH_SHOW', payload: { id: this.props.match.params.id } });    
+  // }
 
   
 //note: params where undefined because this was a component being used inside a component
@@ -40,7 +40,7 @@ class BikeTableBase extends Component {
           </TableHead>
           <TableBody>
          {this.props.show.map(intake =>
-           <BikeTableRow key={intake.id} history={this.props.history} intake={intake}/>
+           <BikeTableRow key={intake.id} history={this.props.history} intake={intake} match={this.props.match}/>
          )}
          
        

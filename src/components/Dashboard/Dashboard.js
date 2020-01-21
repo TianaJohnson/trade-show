@@ -7,6 +7,10 @@ import BikeTable from '../BikeTable/BikeTableBase';
 import './Dashboard.css';
 
 class Dashboard extends Component {
+
+    componentDidMount() {
+        this.props.dispatch({ type: 'FETCH_SHOW', payload: { id: this.props.match.params.id } });    
+      }
     
 
     addNew = () => {
