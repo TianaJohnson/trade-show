@@ -12,7 +12,7 @@ const rootReducer = combineReducers({
   loginMode, // will have a value of 'login' or 'registration' to control which screen is shown
   user, // will have an id and username if someone is logged in
   add, // bike show information
-  buider // builder information per show
+  builder // builder information per show
 });
 
 export default rootReducer;
