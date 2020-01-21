@@ -19,15 +19,13 @@ router.post('/add', (req, res, next) => {
                                  req.body.state,
                                  req.body.city,
                                  req.body.country
-                                 ])
-                                 .then((results) => {
+                                 ]).then((results) => {
                                     // Insert empty project for new customer
                                     const anotherQuery = `INSERT INTO "builder_intake"
                                          ("show_id") 
-                                          VALUE ($1);`;
-                                    pool.query(anotherQuery, [results.rows[0].id,
-                                    req.user.id]).then(() => {
-                                        console.log('server side intake Post');
+                                          VALUES ($1);`;
+                                    pool.query(anotherQuery, [results.rows[0].id]).then(() => {
+                                        console.log('Show attached to builder', req.body );
                                         res.sendStatus(201);
                                     }).catch(error => {
                                         res.sendStatus(500);
