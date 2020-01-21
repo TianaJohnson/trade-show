@@ -9,19 +9,24 @@ router.put('/:id', (req, res, next) => {
 if (req.isAuthenticated()) {
     const queryText = `UPDATE "bulder_intake"
     SET "brand",
-        "first_name",
-        "last_name",
-        "build_state",
-        "build_city",
-        "build_country"
-        VALUES ( $1, $2, $3, $4, $5, $6) WHERE "show_id" = $7;`
+        "first_name" = $1,
+        "last_name" = $2,
+        "build_state" = $3,
+        "build_city" = $4,
+        "build_country" = $5
+        WHERE "show_id" = $7;`
     pool.query(queryText, [req.body.brand,
                              req.body.first_name,
                              req.body.last_name,
                              req.body.build_city,
                              req.body.build_state,
-                             req.body.build_country
+                             req.body.build_country,
+                             req.params.id
                              ])
+                             .then(() => {
+                                console.log('server side builder Post');
+                                res.sendStatus(201);
+                            })
                              .catch((error) => {
                                 console.log('Something went wrong in POST new builder', error);
                                 res.sendStatus(500);
