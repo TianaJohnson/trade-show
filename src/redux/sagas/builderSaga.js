@@ -8,6 +8,7 @@ function* addBuild(action) {
     } catch (error) {
         console.log('Error in add project:', error);
     }
+}
 
     function* builderSaga() {
         yield takeLatest('ADD_BUILD', addBuild);
