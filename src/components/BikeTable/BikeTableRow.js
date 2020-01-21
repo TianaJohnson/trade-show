@@ -36,7 +36,8 @@ class BikeTableRow extends Component {
             <TableCell>
             <Button variant="contained"
                     color="primary"
-                    style={{ margin: 10 }}>
+                    style={{ margin: 10 }}
+                    onClick={this.deleteInfo}>
                     x
             </Button>
             </TableCell>
