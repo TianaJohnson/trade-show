@@ -2,18 +2,19 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-
-router.post('/builder', (req, res, next) => {
-    console.log(req.body);
+//"put" because I am updating it
+router.put('/:id', (req, res, next) => {
+    console.log(req.body, req.user.id);
+    console.log('params', req.params.id);
 if (req.isAuthenticated()) {
-    const queryText = ` INSERT INTO "bulder_intake"
-    ("brand",
-    "first_name",
-    "last_name",
-    "build_state",
-    "build_city",
-    "build_country"
-    VALUES ( $1, $2, $3, $4, $5, $6) WHERE "show_id" = $7;`
+    const queryText = `UPDATE "bulder_intake"
+    SET "brand",
+        "first_name",
+        "last_name",
+        "build_state",
+        "build_city",
+        "build_country"
+        VALUES ( $1, $2, $3, $4, $5, $6) WHERE "show_id" = $7;`
     pool.query(queryText, [req.body.brand,
                              req.body.first_name,
                              req.body.last_name,
