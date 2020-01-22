@@ -9,7 +9,7 @@ import './BikeTable.css';
 class BikeTableRow extends Component {
 
     showFile = () => {
-        this.props.history.push(`/show/${this.props.client.id}`);
+        this.props.history.push(`/show/${this.props.intake.id}`);
     }
 
     
