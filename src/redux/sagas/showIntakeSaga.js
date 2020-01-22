@@ -36,6 +36,16 @@ function* deleteShowInfo(action) {
     alert('Unable to delete trade show information', error);
   }
 }
+
+function* fetchFocusShow(action) {
+  try{
+  const responseFromServer = yield axios.get(`/intake/${action.payload}`);
+  yield put({type: 'SET_FOCUS', payload: responseFromServer.data});
+  console.log('response from server is:',responseFromServer.data)
+} catch (error) {
+  console.log('Unabale to fetch customers from server', error);
+  alert('Unabale to fetch customers from server', error);
+}
   
   function* showIntakesaga() {
     yield takeLatest('ADD_SHOW', addShow);
