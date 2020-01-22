@@ -39,7 +39,7 @@ function* deleteShowInfo(action) {
 
 function* fetchFocusShow(action) {
   try{
-  const responseFromServer = yield axios.get(`/intake/${action.payload}`);
+  const responseFromServer = yield axios.get(`/show/${action.payload}`);
   yield put({type: 'SET_FOCUS_SHOW', payload: responseFromServer.data});
   console.log('response from server is:',responseFromServer.data)
 } catch (error) {
