@@ -12,6 +12,8 @@ class BikeTableRow extends Component {
         this.props.history.push(`/show/${this.props.client.id}`);
     }
 
+    
+
     deleteInfo = (event) => {
         const action = {
              type: 'DELETE_SHOW_INFO',
@@ -30,7 +32,8 @@ class BikeTableRow extends Component {
             <TableCell>{this.props.intake.show_date}</TableCell>     
             <TableCell><Button variant="contained"
                     color="secondary"
-                    style={{ margin: 10 }}>
+                    style={{ margin: 10 }}
+                    onClick={this.showFile}>
                     Customer File
             </Button></TableCell>
             <TableCell>
