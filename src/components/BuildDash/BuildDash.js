@@ -18,7 +18,7 @@ class BuildDash extends Component {
         return (
             <div>
                 <Card>
-                    Show:{this.props.}
+                    {/* Show:{this.props.} */}
                     <br/>
                     <Button variant="contained"
                     color="primary"
