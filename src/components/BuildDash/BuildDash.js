@@ -16,13 +16,14 @@ class BuildDash extends Component {
       }
 
     render() {
+        const info = this.props.reduxStore.show.showReducer;
         return (
             
             <div>
                 
                 <Card>
-                    Show:
-                    {JSON.stringify(this.props.showInfo.show)}
+                    <p>Show:{info.id}</p>
+                    {/* {JSON.stringify(this.props.showInfo.show)} */}
                     <br/>
                     <Button variant="contained"
                     color="primary"
@@ -36,9 +37,8 @@ class BuildDash extends Component {
          )
     }
 }
-const mapStateToProps = reduxStore => ({
-    ...reduxStore,
-    showInfo: reduxStore.add.showIntakeReducer,
-});
+const mapStateToProps = reduxStore => {
+    return { reduxStore: reduxStore };
+    }
     
 export default connect(mapStateToProps)(BuildDash);
