@@ -3,15 +3,14 @@ import { connect } from 'react-redux';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Button from '@material-ui/core/Button';
-import BuildDash from '../BuildDash/BuildDash';
+//import BuildDash from '../BuildDash/BuildDash';
 import './BikeTable.css';
 
 
 class BikeTableRow extends Component {
 
     showFile = () => {
-        //<BuildDash match={this.props.match} history={this.props.history}/>
-        this.props.history.match.push(`/show/${this.props.intake.id}`);
+        this.props.history.push(`/show/${this.props.intake.id}`);
     }
 
     
