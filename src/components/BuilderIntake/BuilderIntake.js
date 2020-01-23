@@ -11,13 +11,13 @@ class BuilerIntake extends Component {
         this.props.dispatch({ type: 'FETCH_BUILDER', payload: { id: this.props.match.params.id } });   
     }
 
-    addBuildwe = (event) => {
-        console.log('project In');
+    addBuilder = (event) => {
+        console.log('Builder info');
         const action = {
-            type: 'ADD_PROJECT',
-            payload: this.props.reduxStore.project.projectReducer,
+            type: 'ADD_BUILDER',
+            payload: this.props.reduxStore.builder.builderReducer,
         };
-        console.log('sending to project saga')
+        console.log('sending to builder saga')
         this.props.dispatch(action);
         this.setState({
             show_name: '',
@@ -43,6 +43,7 @@ class BuilerIntake extends Component {
     }
 
     render() {
+        const build = this.props.reduxStore.builder.builderReducer;
         return (
             <div>
                 <Card className="addNewCard">
@@ -53,7 +54,7 @@ class BuilerIntake extends Component {
                             label="Brand" 
                             name="brand"
                             variant="outlined"
-                            value={this.state.brand}
+                            value={build.brand}
                             onChange={this.handleChange}>
                     </TextField>
                     <TextField id="fNameIntake" 
@@ -61,7 +62,7 @@ class BuilerIntake extends Component {
                             label="First Name"
                             name="first_name"
                             style={{ marginLeft: 10 }}
-                            value={this.state.first_name}
+                            value={build.first_name}
                             onChange={this.handleChange}>
                     </TextField>
                     <TextField id="lNameIntake" 
@@ -69,14 +70,14 @@ class BuilerIntake extends Component {
                             label="Last Name"
                             name="last_name"
                             style={{ marginLeft: 10 }}
-                            value={this.state.last_name}
+                            value={build.last_name}
                             onChange={this.handleChange}>
                     </TextField>
                     <TextField id="firstNameIntake" 
                                label="City" 
                                name="build_city"
                                variant="outlined"
-                               value={this.state.build_city}
+                               value={build.build_city}
                                 onChange={this.handleChange}>
                     </TextField>
                     <TextField id="lastNameIntake" 
@@ -84,7 +85,7 @@ class BuilerIntake extends Component {
                                label="State"
                                name="build_state"
                                style={{ marginLeft: 10 }}
-                               value={this.state.build_state}
+                               value={build.build_state}
                                 onChange={this.handleChange}>
                     </TextField>
                     <br/>
@@ -94,7 +95,7 @@ class BuilerIntake extends Component {
                                variant="outlined"
                                label="Country"
                                name="build_country"
-                               value={this.state.build_country}
+                               value={build.build_country}
                                onChange={this.handleChange}>
                     </TextField>
                    
