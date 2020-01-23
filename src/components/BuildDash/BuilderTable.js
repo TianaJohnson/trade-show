@@ -46,6 +46,6 @@ class BuilderTable extends Component {
 }
 const mapStateToProps = reduxStore => ({
   ...reduxStore,
-  show: reduxStore.add.showIntakeReducer,
+  show: reduxStore.show.showReducer,
 });
 export default connect(mapStateToProps)(BuilderTable);

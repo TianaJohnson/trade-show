@@ -7,7 +7,7 @@ import Card from '@material-ui/core/Card';
 class BuildDash extends Component {
 
     componentDidMount() {
-        this.props.dispatch({ type: 'FETCH_BUILDER', payload: { id: this.props.match.params.id } });
+        this.props.dispatch({ type: 'FETCH_SHOW', payload: { id: this.props.match.params.id } });
          
       }
 
@@ -22,8 +22,8 @@ class BuildDash extends Component {
             <div>
                 
                 <Card>
-                    {/* <p>Show:{info.id}</p> */}
-                    {/* {JSON.stringify(this.props.showInfo.show)} */}
+                    <p>Show:</p>
+                    
                     <br/>
                     <Button variant="contained"
                     color="primary"
