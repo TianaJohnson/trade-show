@@ -37,23 +37,23 @@ function* deleteShowInfo(action) {
   }
 }
 
-function* fetchFocusShow(action) {
-  try{
-  const responseFromServer = yield axios.get(`/show/${action.payload}`);
-  yield put({type: 'SET_FOCUS_SHOW', payload: responseFromServer.data});
-  console.log('response from server is:',responseFromServer.data)
-} catch (error) {
-  console.log('Unabale to fetch customers from server', error);
-  alert('Unabale to fetch customers from server', error);
-}
-}
+// function* fetchFocusShow(action) {
+//   try{
+//   const responseFromServer = yield axios.get(`/show/${action.payload}`);
+//   yield put({type: 'SET_FOCUS_SHOW', payload: responseFromServer.data});
+//   console.log('response from server is:',responseFromServer.data)
+// } catch (error) {
+//   console.log('Unabale to fetch Show info from server', error);
+//   alert('Unabale to fetch customers from server', error);
+// }
+// }
 
   
   function* showIntakesaga() {
     yield takeLatest('ADD_SHOW', addShow);
     yield takeLatest('FETCH_SHOW', fetchShow);
     yield takeLatest('DELETE_SHOW_INFO', deleteShowInfo);
-    yield takeLatest('SET_FOCUS_SHOW',fetchFocusShow);
+    //yield takeLatest('SET_FOCUS_SHOW',fetchFocusShow);
     
   }
   export default showIntakesaga;
