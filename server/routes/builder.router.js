@@ -7,7 +7,7 @@ router.put('/:id', (req, res, next) => {
     console.log(req.body, req.user.id);
     console.log('params', req.params.id);
 if (req.isAuthenticated()) {
-    const queryText = `UPDATE "bulder_intake"
+    const queryText = `UPDATE "builder_intake"
     SET "brand",
         "first_name" = $1,
         "last_name" = $2,

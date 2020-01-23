@@ -8,7 +8,7 @@ const emptyBuild = {
   build_city:'',
   build_sate:'',
   build_country:'',
- 
+  show_id: 0,
 };
 
 const builderReducer = (state = emptyBuild, action) => {

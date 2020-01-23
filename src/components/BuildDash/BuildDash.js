@@ -12,11 +12,11 @@ class BuildDash extends Component {
       }
 
     addNew = () => {
-        this.props.history.push('/add');
+        this.props.history.push('/build');
       }
 
     render() {
-        const info = this.props.reduxStore.builder.builderReducer;
+       // const info = this.props.reduxStore.builder.builderReducer;
         return (
             
             <div>
@@ -25,6 +25,12 @@ class BuildDash extends Component {
                     <p>Show:</p>
                     {JSON.stringify(this.props.reduxStore.builder.builderReducer)}
                     <br/>
+                    <Button variant="contained"
+                    color="primary"
+                    style={{ margin: 10 }}
+                    onClick={this.addNew}>
+                    Add Builder Information
+                    </Button>
                     <Button variant="contained"
                     color="primary"
                     style={{ margin: 10 }}
