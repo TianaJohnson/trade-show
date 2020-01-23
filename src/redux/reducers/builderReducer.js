@@ -3,6 +3,11 @@ import { combineReducers } from 'redux';
 const emptyBuild = {
   show_name: '',
   brand: '',
+  first_name:'',
+  last_name:'',
+  build_city:'',
+  build_sate:'',
+  build_country:'',
  
 };
 
@@ -10,7 +15,7 @@ const builderReducer = (state = emptyBuild, action) => {
 console.log('project reducer');
 switch (action.type) {
 case 'CLEAR_BUILDER':
-return emptyProject;
+return emptyBuild;
 case 'SET_BUILDER':
 if(action.payload && action.payload !== '' && action.payload.project_name) {
 console.log('action.paylod:', action.payload)
