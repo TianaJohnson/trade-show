@@ -16,14 +16,14 @@ class BuildDash extends Component {
       }
 
     render() {
-        const info = this.props.reduxStore.show.showReducer;
+        const info = this.props.reduxStore.builder.builderReducer;
         return (
             
             <div>
                 
                 <Card>
                     <p>Show:</p>
-                    
+                    {JSON.stringify(this.props.reduxStore.builder.builderReducer)}
                     <br/>
                     <Button variant="contained"
                     color="primary"
