@@ -40,7 +40,7 @@ if (req.isAuthenticated()) {
 
 router.get('/:id', (req, res) => {
     console.log('in GET builer get id ')
-    console.log('req.params: project get', req.user.id);
+    console.log('req.params: builder get', req.user.id);
     if (req.isAuthenticated()) {
         console.log('req.user:', req.user.id);
         pool.query(`SELECT * FROM "builder_intake"
@@ -59,30 +59,6 @@ router.get('/:id', (req, res) => {
       res.sendStatus(403);
     }
   });
-
-
-//get specific show information by id
-router.get('/:id', (req, res) => {
-    console.log('in GET show id ')
-    if (req.isAuthenticated()) {
-        console.log('req.user:', req.user);
-        pool.query(`SELECT * FROM "show_intake"
-        WHERE "id" = $1;`, [req.params.id])
-            .then(results => {
-                console.log(results.rows[0])
-                res.send(results.rows[0])
-            })
-            .catch(error => {
-                console.log('Error making SELECT for show intake by id database:', error);
-                res.sendStatus(500);
-            });
-    } else {
-        // They are not authenticated.
-        res.sendStatus(403);
-    }
-});
-
-
 
 
 module.exports = router;

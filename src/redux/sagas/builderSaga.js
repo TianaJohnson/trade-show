@@ -14,11 +14,11 @@ function* fetchBuilder(action) {
     console.log('get project server 1');
     console.log('action:')
     try {
-        const responseFromServer = yield axios.get(`/project/${action.payload.id}`);
+        const responseFromServer = yield axios.get(`//${action.payload.id}`);
         yield put({ type: 'SET_BUILDER', payload: responseFromServer.data });
         console.log('response from project server is:', responseFromServer.data);
     } catch (error) {
-        console.log('Unabale to fetch project from server', error);
+        console.log('Unabale to fetch builder from server', error);
         alert('Unabale to fetch project from server', error);
     }
 }
