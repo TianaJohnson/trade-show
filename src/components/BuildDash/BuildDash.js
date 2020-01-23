@@ -16,9 +16,12 @@ class BuildDash extends Component {
 
     render() {
         return (
+            
             <div>
+                
                 <Card>
-                    Show:{JSON.stringify(this.props.showIntakeReducer)}
+                    Show:
+                    {JSON.stringify(this.props.reduxStore.add.showIntakeReducer)}
                     <br/>
                     <Button variant="contained"
                     color="primary"
