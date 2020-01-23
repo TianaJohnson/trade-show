@@ -54,6 +54,7 @@ class BuilerIntake extends Component {
                             label="Brand" 
                             name="brand"
                             variant="outlined"
+                            style={{ marginLeft: 10 }}
                             value={build.brand}
                             onChange={this.handleChange}>
                     </TextField>
@@ -77,6 +78,7 @@ class BuilerIntake extends Component {
                                label="City" 
                                name="build_city"
                                variant="outlined"
+                               style={{ marginLeft: 10 }}
                                value={build.build_city}
                                 onChange={this.handleChange}>
                     </TextField>
