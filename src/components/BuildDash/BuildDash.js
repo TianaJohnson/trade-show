@@ -22,7 +22,7 @@ class BuildDash extends Component {
             <div>
                 
                 <Card>
-                    <p>Show:{info.id}</p>
+                    {/* <p>Show:{info.id}</p> */}
                     {/* {JSON.stringify(this.props.showInfo.show)} */}
                     <br/>
                     <Button variant="contained"
