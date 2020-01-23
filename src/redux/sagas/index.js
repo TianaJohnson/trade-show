@@ -2,7 +2,7 @@ import { all } from 'redux-saga/effects';
 import loginSaga from './loginSaga';
 import registrationSaga from './registrationSaga';
 import userSaga from './userSaga';
-import add from './showIntakeSaga';
+import show from './showSaga';
 import build from './builderSaga';
 
 // some sagas trigger other sagas, as an example
@@ -13,7 +13,7 @@ export default function* rootSaga() {
     loginSaga(),
     registrationSaga(),
     userSaga(),
-    add(),
+    show(),
     build()
   ]);
 }
