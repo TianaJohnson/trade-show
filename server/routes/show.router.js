@@ -43,7 +43,7 @@ router.post('/add', (req, res, next) => {
     });
 
     //R-Read
-router.get('/show', (req, res) => {
+router.get('/', (req, res) => {
     console.log('In show information git');
     if (req.isAuthenticated()) {
         console.log('req.user:', req.user);

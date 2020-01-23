@@ -16,7 +16,7 @@ function* addShow(action) {
 
   function* fetchShow(action) {
     try{
-    const response = yield axios.get(`/api/show/show`);
+    const response = yield axios.get(`/api/show/`);
     yield put({ type: 'SET_SHOW', payload: response.data});
     console.log('response from server is:',response.data)
   } catch (error) {

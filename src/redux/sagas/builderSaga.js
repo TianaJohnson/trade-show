@@ -10,9 +10,22 @@ function* addBuild(action) {
     }
 }
 
+function* fetchBuilder(action) {
+    console.log('get project server 1');
+    console.log('action:')
+    try {
+        const responseFromServer = yield axios.get(`/project/${action.payload.id}`);
+        yield put({ type: 'SET_BUILDER', payload: responseFromServer.data });
+        console.log('response from project server is:', responseFromServer.data);
+    } catch (error) {
+        console.log('Unabale to fetch project from server', error);
+        alert('Unabale to fetch project from server', error);
+    }
+}
+
     function* builderSaga() {
-        yield takeLatest('ADD_BUILD', addBuild);
-        
+        yield takeLatest('ADD_BUILDER', addBuilder);
+        yield takeLatest('FETCH_BUILDER', fetchBuilder);        
       }
 
 export default builderSaga;
