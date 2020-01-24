@@ -10,7 +10,7 @@ const emptyBuild = {
   build_country:'',
   show_id: 0,
 };
-
+//not a great day, a rest day but a commit none the less
 const builderReducer = (state = emptyBuild, action) => {
 console.log('project reducer');
 switch (action.type) {

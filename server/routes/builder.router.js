@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
                     JOIN "show_intake" ON "builder_intake"."show_id" = "show_intake"."id"
                     WHERE "builder_intake"."show_id" = $1;`, [req.params.id])
             .then(results => {
-                console.log(results.rows[0])
+                console.log('RESULTS',results.rows[0])
                 res.send(results.rows[0])
             })
             .catch(error => {

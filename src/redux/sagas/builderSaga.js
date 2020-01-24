@@ -16,7 +16,7 @@ function* fetchBuilder(action) {
     try {
         const responseFromServer = yield axios.get(`api/builder/${action.payload.id}`);
         yield put({ type: 'SET_BUILDER', payload: responseFromServer.data });
-        console.log('response from project server is:', responseFromServer.data);
+        console.log('response from builder server is:', responseFromServer.data);
     } catch (error) {
         console.log('Unabale to fetch builder from server', error);
         alert('Unabale to fetch builder from server', error);

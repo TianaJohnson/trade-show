@@ -29,7 +29,7 @@ class BuilerIntake extends Component {
             build_country:'',
             show_id:this.props.match.params.id,
         })
-        this.props.history.push(`/show/${this.props.intake.id}`);
+  //this.props.history.push(`/show/${this.props.intake.id}`);
     }
 //Send to saga to create a customer in the data base
 
