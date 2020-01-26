@@ -6,8 +6,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import TableCell from '@material-ui/core/TableCell';
 import TableBody from "@material-ui/core/TableBody";
-import BikeTableRow from "./BikeTableRow";
-import "./BuilderDash.css";
+//import BikeTableRow from "./BikeTableRow";
+import "./BuildDash.css";
 
 
 
@@ -23,22 +23,22 @@ class BuilderTable extends Component {
         <Table className="main-table">
           <TableHead>
             <TableRow>
-              <TableCell>Brand</TableCell>
-              <TableCell>Builder Name</TableCell>
-              <TableCell>City</TableCell>
-              <TableCell>State</TableCell>
-              <TableCell>Country</TableCell>
-              <TableCell>file</TableCell>
-              <TableCell>Remove</TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
-         {this.props.show.map(intake =>
-           <BikeTableRow key={intake.id} history={this.props.history} build={build} match={this.props.match}/>
+          {/* <TableBody>
+         {this.props.builder.map(build =>
+           <BikeTableRow key={build.id} history={this.props.history} build={build} match={this.props.match}/>
          )}
          
        
-   </TableBody>
+   </TableBody> */}
         </Table>
       </Paper>
     );
@@ -46,6 +46,6 @@ class BuilderTable extends Component {
 }
 const mapStateToProps = reduxStore => ({
   ...reduxStore,
-  show: reduxStore.show.showReducer,
+  builder: reduxStore.builder.builderReducer,
 });
 export default connect(mapStateToProps)(BuilderTable);
