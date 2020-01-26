@@ -7,9 +7,9 @@ import './BuilderIntake.css';
 
 class BuilerIntake extends Component {
 
-    componentDidMount() {
-        this.props.dispatch({ type: 'FETCH_BUILDER', payload: { id: this.props.match.params.id } });   
-    }
+    // componentDidMount() {
+    //     this.props.dispatch({ type: 'FETCH_BUILDER', payload: { id: this.props.match.params.id } });   
+    // }
 
     addBuilder = (event) => {
         console.log('Builder info');
