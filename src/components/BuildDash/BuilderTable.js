@@ -23,11 +23,7 @@ class BuilderTable extends Component {
         <Table className="main-table">
           <TableHead>
             <TableRow>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
+              <TableCell>Brand</TableCell>
               <TableCell></TableCell>
               <TableCell></TableCell>
             </TableRow>
