@@ -7,13 +7,11 @@ import './BuilderIntake.css';
 
 class BuilerIntake extends Component {
 
-    // componentDidMount() {
-    //     this.props.dispatch({ type: 'FETCH_BUILDER', payload: { id: this.props.match.params.id } });   
-    // }
 
     addBuilder = (event) => {
         console.log('Builder info');
         const builder = this.props.reduxStore.builder.builderReducer;
+        const show = this .props.reduxStore.show.showReducer;
         const action = {
             type: 'ADD_BUILDER',
             payload: builder,
@@ -30,7 +28,7 @@ class BuilerIntake extends Component {
             build_country:'',
             show_id:this.props.match.params.id,
         })
-  this.props.history.push(`/show/${builder.show_id}`);
+  this.props.history.push(`/show/${show.id}`);
     }
 //Send to saga to create a customer in the data base
 
