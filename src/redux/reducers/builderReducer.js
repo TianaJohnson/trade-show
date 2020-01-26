@@ -10,7 +10,7 @@ const emptyBuild = {
   build_country:'',
   show_id: 0,
 }
-//another day off
+
 const builderReducer = (state = emptyBuild, action) => {
 console.log('project reducer');
 switch (action.type) {

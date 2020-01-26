@@ -13,9 +13,10 @@ class BuilerIntake extends Component {
 
     addBuilder = (event) => {
         console.log('Builder info');
+        const builder = this.props.reduxStore.builder.builderReducer;
         const action = {
             type: 'ADD_BUILDER',
-            payload: this.props.reduxStore.builder.builderReducer,
+            payload: builder,
         };
         console.log('sending to builder saga')
         this.props.dispatch(action);
@@ -29,7 +30,7 @@ class BuilerIntake extends Component {
             build_country:'',
             show_id:this.props.match.params.id,
         })
-  //this.props.history.push(`/show/${this.props.intake.id}`);
+  this.props.history.push(`/show/${builder.show_id}`);
     }
 //Send to saga to create a customer in the data base
 
