@@ -24,7 +24,7 @@ class BuilderTable extends Component {
           <TableHead>
             <TableRow>
               <TableCell>Brand</TableCell>
-              <TableCell></TableCell>
+              <TableCell>Builder</TableCell>
               <TableCell></TableCell>
             </TableRow>
           </TableHead>
