@@ -1,7 +1,7 @@
 .login-background{
         background-repeat: no-repeat;
         background-size: cover;
-        margin-top: auto;
+        margin-top: auto; 
         background-color:lightslategray;
         min-height: 600px;
     }
@@ -9,9 +9,9 @@
 .login_ui {
         background-color: #2d8059;
         width: 30%;
-        height: 250px;
-        margin: 20px auto;
-        padding: 25px;
+        height: 50%;
+        margin: auto;
+        padding: 50px;
         border-radius: 2px;
 }
 
