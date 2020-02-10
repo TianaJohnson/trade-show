@@ -1,5 +1,5 @@
 .login-background{
-        background-repeat: no-repeat;
+        /* background-repeat: no-repeat; */
         background-size: cover;
         margin-top: auto; 
         background-color:lightslategray;
@@ -10,7 +10,7 @@
         background-color: #2d8059;
         width: 30%;
         height: 50%;
-        margin: auto;
+        margin: 20px auto;
         padding: 50px;
         border-radius: 2px;
 }
