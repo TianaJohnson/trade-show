@@ -33,6 +33,7 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="login-background">
+        <br/>
         {this.props.errors.loginMessage && (
           <h2
             className="alert"

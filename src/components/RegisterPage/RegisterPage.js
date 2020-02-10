@@ -33,6 +33,7 @@ class RegisterPage extends Component {
   render() {
     return (
       <div className="reg-background">
+        <br/>
         {this.props.errors.registrationMessage && (
           <h2
             className="alert"
