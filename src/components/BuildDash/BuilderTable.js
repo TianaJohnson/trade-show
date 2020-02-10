@@ -10,7 +10,7 @@ import Card from '@material-ui/core/Card';
 //import BikeTableRow from "./BikeTableRow";
 import "./BuildDash.css";
 
-//...
+
 
 class BuilderTable extends Component {
 
