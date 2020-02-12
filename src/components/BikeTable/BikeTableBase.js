@@ -10,7 +10,7 @@ import TableBody from "@material-ui/core/TableBody";
 import BikeTableRow from "./BikeTableRow";
 import "./BikeTable.css";
 
-
+//hooks
 
 class BikeTableBase extends Component {
 
