@@ -34,6 +34,7 @@ class RegisterPage extends Component {
     return (
       <div className="reg-background">
         <br/>
+        <br/>
         {this.props.errors.registrationMessage && (
           <h2
             className="alert"
