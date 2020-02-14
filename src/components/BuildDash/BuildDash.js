@@ -24,7 +24,7 @@ class BuildDash extends Component {
                 
                 <Card>
                     <p>Show:</p>
-                    {JSON.stringify(this.props.reduxStore.builder.builderReducer)}
+                    {/* {JSON.stringify(this.props.reduxStore.builder.builderReducer)} */}
                     <br/>
                     <Button variant="contained"
                     color="primary"
