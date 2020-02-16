@@ -9,9 +9,9 @@ import './BuildDash.css';
 
 class BuilderRow extends Component {
 
-    showFile = () => {
-        this.props.history.push(`/show/${this.props.intake.id}`);
-    }
+    // showFile = () => {
+    //     this.props.history.push(`/show/${this.props.intake.id}`);
+    // }
 
     
 
