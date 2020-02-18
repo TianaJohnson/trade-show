@@ -15,15 +15,15 @@ class BuilderRow extends Component {
 
     
 
-    deleteInfo = (event) => {
-        const action = {
-             type: 'DELETE_SHOW_INFO',
-             payload:{
-                  id:this.props.intake.id },
-                };
-                console.log('delete action', action);
-        this.props.dispatch(action);     
-    }
+    // deleteInfo = (event) => {
+    //     const action = {
+    //          type: 'DELETE_SHOW_INFO',
+    //          payload:{
+    //               id:this.props.intake.id },
+    //             };
+    //             console.log('delete action', action);
+    //     this.props.dispatch(action);     
+    // }
 
     render() {
         return ( 
