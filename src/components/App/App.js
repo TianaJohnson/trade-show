@@ -64,6 +64,11 @@ class App extends Component {
               path="/build"
               component={AddBuild}
             />
+            <ProtectedRoute
+              exact
+              path="/builder/:id"
+              component={BuildDash}
+            />
             
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />

@@ -9,21 +9,21 @@ import './BuildDash.css';
 
 class BuilderRow extends Component {
 
-    // showFile = () => {
-    //     this.props.history.push(`/show/${this.props.intake.id}`);
-    // }
+    buildFile = () => {
+        this.props.history.push(`/builder/${this.props.intake.id}`);
+    }
 
     
 
-    // deleteInfo = (event) => {
-    //     const action = {
-    //          type: 'DELETE_SHOW_INFO',
-    //          payload:{
-    //               id:this.props.intake.id },
-    //             };
-    //             console.log('delete action', action);
-    //     this.props.dispatch(action);     
-    // }
+    deleteInfo = (event) => {
+        const action = {
+             type: 'DELETE_BUILDER_INFO',
+             payload:{
+                  id:this.props.BuilderRow.id },
+                };
+                console.log('delete builder action', action);
+        this.props.dispatch(action);     
+    }
 
     render() {
         return ( 
