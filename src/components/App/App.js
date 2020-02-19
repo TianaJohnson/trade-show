@@ -18,6 +18,7 @@ import Dashboard from '../Dashboard/Dashboard';
 import AddShow from '../ShowIntake/ShowIntake';
 import BuildDash from '../BuildDash/BuildDash';
 import AddBuild from '../BuilderIntake/BuilderIntake';
+import BuilderInfo from '../BuilderInfo/BuilderInfoDash;'
 
 import './App.css';
 
