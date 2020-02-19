@@ -18,7 +18,7 @@ import Dashboard from '../Dashboard/Dashboard';
 import AddShow from '../ShowIntake/ShowIntake';
 import BuildDash from '../BuildDash/BuildDash';
 import AddBuild from '../BuilderIntake/BuilderIntake';
-import BuilderInfo from '../BuilderInfo/BuilderInfoDash;'
+import BikeFile from '../BikeFile/BikeFile';
 
 import './App.css';
 
@@ -69,7 +69,7 @@ class App extends Component {
             {/* <ProtectedRoute
               exact
               path="/builder/:id"
-              component={}
+              component={BikeFile}
             /> */}
             
             {/* If none of the other routes matched, we will show a 404. */}
