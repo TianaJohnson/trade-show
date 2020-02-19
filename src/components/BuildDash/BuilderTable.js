@@ -29,13 +29,13 @@ class BuilderTable extends Component {
               <TableCell>file</TableCell>
             </TableRow>
           </TableHead>
-          {/* <TableBody>
+          <TableBody>
          {this.props.builder.map(build =>
            <BikeTableRow key={build.id} history={this.props.history} build={build} match={this.props.match}/>
          )}
          
        
-   </TableBody> */}
+   </TableBody>
         </Table>
       </Paper>
       </Card>

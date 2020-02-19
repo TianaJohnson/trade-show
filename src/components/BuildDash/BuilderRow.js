@@ -28,14 +28,13 @@ class BuilderRow extends Component {
     render() {
         return ( 
             <TableRow>
-            <TableCell>{this.props.intake.show}</TableCell>
-            <TableCell>{this.props.intake.city}, {this.props.intake.state}</TableCell>   
-            <TableCell>{this.props.intake.show_date}</TableCell>     
+            <TableCell>{this.props.build.brand}</TableCell>
+            <TableCell>{this.props.build.builder}</TableCell>  
             <TableCell><Button variant="contained"
                     color="secondary"
                     style={{ margin: 10 }}
                     onClick={this.showFile}>
-                    Customer File
+                    Builder File
             </Button></TableCell>
             <TableCell>
             <Button variant="contained"
