@@ -1,15 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Footer.css'
 
-class Footer extends Component {
-  render() {
-    return (
-      <div className="footer">
-        Diamond Duck Enterprise
-      </div>
-     )
-  }
-}
 
+const Footer = () => (
+  <footer>
+    &copy; Diamond Duck Inc.
+  </footer>
+);
 
 export default Footer;
