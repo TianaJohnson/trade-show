@@ -1,23 +1,11 @@
 .login-background{
 
+        height: auto;
         background-repeat: no-repeat; 
         background-size: cover;
         margin-top: auto;
         background-color:lightslategray;
     }
-
-    @media screen and (max-width: 1200px) {
-        .login-background{
-          background-color: blue;
-          margin:px;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        .login-background{
-          background-color: olive;
-        }
-      }
 
 .login_ui {
         background-color: #2d8059;
