@@ -1,8 +1,7 @@
-#container {
-    position: relative;
-    min-height: 100vh;
-  }
-
+:react-root {
+    --space: 1.5em 0;
+    --space: 2em 0;
+}
 
 footer {
     height: 100px;
