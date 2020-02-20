@@ -5,14 +5,19 @@
         background-size: cover;
         margin: auto;
         background-color:lightslategray;
-        padding: 185px;
+        padding: 190px;
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1200px) {
       .login-background{
         background-color: blue;
-        padding-bottom: 70px;
-        padding-top:70px;
+        padding:140px;
+      }
+    }
+    @media screen and (max-width: 950px) {
+      .login-background{
+        background-color:yellow;
+        padding:85px;
       }
     }
 
@@ -45,3 +50,5 @@
         background-color: #c3d330;
         color:black;
       }
+
+/* apparently I need to make this more mobile friendly as well */
