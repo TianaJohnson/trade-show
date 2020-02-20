@@ -1,7 +1,9 @@
 .login-background{
-        /* background-repeat: no-repeat; */
-        /* background-size: cover; */
-        /* margin-top: auto;  */
+
+        height: auto;
+        /* background-repeat: no-repeat; 
+        background-size: cover;
+        margin-top: auto;   */
         background-color:lightslategray;
     }
 
