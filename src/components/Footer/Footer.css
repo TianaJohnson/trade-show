@@ -3,3 +3,15 @@ footer{
     background-color: chartreuse;
     height: 120px;
 }
+@media screen and (max-width: 1000px) {
+    footer{
+      height:75px;
+      background-color: chocolate;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    footer{
+      
+    }
+  }
