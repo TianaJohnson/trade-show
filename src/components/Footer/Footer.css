@@ -1,8 +1,13 @@
+#container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+
 footer {
-    margin: auto;
     height: 100px;
     background-color:purple;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     position: relative;
 }
