@@ -48,6 +48,7 @@ class LoginPage extends Component {
             {this.props.errors.loginMessage}
           </h2>
         )}
+        <div className="login_text">
         <form className="login_ui" 
         onSubmit={this.login}>
           <h1>Login</h1>
@@ -89,9 +90,9 @@ class LoginPage extends Component {
             onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_MODE'})}}
           >
             Register
-          </button>
-        
+          </button>        
         </center>
+        </div>
         <br/>
       </div>
     );
