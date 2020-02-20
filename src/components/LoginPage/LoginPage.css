@@ -26,9 +26,6 @@
         background-color: olive;
       }
     }
-    @media screen and (max-width: 375px){
-      
-    }
 
 .login_ui {
         background-color: #2d8059;
