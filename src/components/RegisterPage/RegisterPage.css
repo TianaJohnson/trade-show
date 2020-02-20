@@ -1,15 +1,32 @@
-.reg_ui {
-    background-color:rgb(161, 34, 165) ;
-    width: 30%;
-    height: 250px;
+.reg_ui{
+    background-color: #2d8059;
+    width: 250px;
+    height: 30%;
     margin: 20px auto;
-    padding: 25px;
+    padding: 50px;
     border-radius: 2px;
 }
+
+
 .reg-background{
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: auto;
-    background-color:lightslategray;
-    min-height: 850px;
+        height: auto;
+        background-repeat: no-repeat; 
+        background-size: cover;
+        margin: auto;
+        background-color:lightslategray;
+        padding: 185px;
 }
+
+@media screen and (max-width: 992px) {
+    .reg-background{
+      background-color: blue;
+      padding-bottom: 70px;
+      padding-top:70px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .reg-background{
+      background-color: olive;
+    }
+  }
