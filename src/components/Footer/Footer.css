@@ -1,5 +1,5 @@
 :root-react {
-    --space: 1.5em 0;
+    --space: 1.0em 0;
     --space: 2em 0;
 }
 
@@ -22,4 +22,10 @@
     margin-top: var(--space);
     height: 0;
     visibility: hidden;
+    background-color: blueviolet;
+}
+
+footer {
+    background-color: blueviolet;
+    content: '\00a0';
 }
