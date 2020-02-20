@@ -21,7 +21,7 @@ import AddBuild from '../BuilderIntake/BuilderIntake';
 import BikeFile from '../BikeFile/BikeFile';
 
 import './App.css';
-import '../Footer/Footer.css';
+//import '../Footer/Footer.css';
 
 class App extends Component {
   componentDidMount () {
