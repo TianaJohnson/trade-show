@@ -26,6 +26,9 @@
         background-color: olive;
       }
     }
+    @media screen and (max-width: 375px){
+      
+    }
 
 .login_ui {
         background-color: #2d8059;
@@ -34,6 +37,11 @@
         margin: 20px auto;
         padding: 50px;
         border-radius: 2px;
+}
+@media screen and (max-width: 375px){
+  .login_ui {
+    padding:0.25px;
+  }
 }
 
 .log-in {
