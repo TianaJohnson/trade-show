@@ -30,9 +30,6 @@ class LoginPage extends Component {
     });
   }
 
-// I am going to need to mess with css @media 
-// in order to make the screen adjust properly
-// per use of app (i.e. phone, monitor)
 
 
 
