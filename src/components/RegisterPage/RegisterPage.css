@@ -40,11 +40,15 @@
 @media screen and (max-width: 375px){
   .reg_ui {
     padding:10px;
-    width:180px;
+    width:190px;
+    margin-left: -50px;
+    margin-top: -100px;
+    margin-bottom: -70px;
 
   }
 }
 
+/* button css */
 .register {
     background-color: #060c0c;
     border-radius: 4px;
@@ -58,3 +62,21 @@
     background-color:orangered;
     color:aliceblue;
   }
+
+
+  .link-button-login {
+    background:none;
+    color:yellow;
+    border:none;
+    padding:0;
+    font: inherit;
+    outline:0;
+    border-bottom:1px solid #444; 
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 375px){
+    .link-button-login {
+        margin-top:80px; 
+    }
+}
