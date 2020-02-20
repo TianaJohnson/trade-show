@@ -25,7 +25,7 @@ input {
 }
 
 /* these need to be added to there own css pages - TJ */
-.log-out, .register {
+.log-out{
   background-color: #060c0c;
   border-radius: 4px;
   color: #f8f8f8;

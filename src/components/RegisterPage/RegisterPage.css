@@ -22,14 +22,14 @@
 
 @media screen and (max-width: 600px) {
     .reg-background{
-      background-color: olive;
+      background-color:mediumvioletred;
     }
   }
 
 
 
 .reg_ui{
-    background-color: #2d8059;
+    background-color:firebrick;
     width: 250px;
     height: 30%;
     margin: 20px auto;
@@ -44,3 +44,17 @@
 
   }
 }
+
+.register {
+    background-color: #060c0c;
+    border-radius: 4px;
+    color: #f8f8f8;
+    min-height: 50px;
+    min-width: 100px;
+    outline:0;
+    cursor: pointer;
+  }
+  .register:hover{
+    background-color: #c3d330;
+    color:aliceblue;
+  }
