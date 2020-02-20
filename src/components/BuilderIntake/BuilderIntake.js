@@ -11,7 +11,7 @@ class BuilerIntake extends Component {
     addBuilder = (event) => {
         console.log('Builder info');
         const builder = this.props.reduxStore.builder.builderReducer;
-        const show = this .props.reduxStore.show.showReducer;
+        const show = this.props.reduxStore.show.showReducer;
         const action = {
             type: 'ADD_BUILDER',
             payload: builder,
