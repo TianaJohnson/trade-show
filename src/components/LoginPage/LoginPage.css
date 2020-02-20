@@ -3,8 +3,22 @@
         height: auto;
         background-repeat: no-repeat; 
         background-size: cover;
-        margin-top: auto;
+        margin: auto;
         background-color:lightslategray;
+        padding: 170px;
+    }
+
+    @media screen and (max-width: 992px) {
+      .login-background{
+        background-color: blue;
+        padding-bottom: 70px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .login-background{
+        background-color: olive;
+      }
     }
 
 .login_ui {
