@@ -1,15 +1,26 @@
 .login-background{
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-top: auto; 
+        /* background-repeat: no-repeat; */
+        /* background-size: cover; */
+        /* margin-top: auto;  */
         background-color:lightslategray;
-        min-height: 600px;
     }
+
+    @media screen and (max-width: 992px) {
+        .login-background{
+          background-color: blue;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .login-background{
+          background-color: olive;
+        }
+      }
 
 .login_ui {
         background-color: #2d8059;
-        width: 30%;
-        height: 50%;
+        width: 200px;
+        height: 30%;
         margin: 20px auto;
         padding: 50px;
         border-radius: 2px;
