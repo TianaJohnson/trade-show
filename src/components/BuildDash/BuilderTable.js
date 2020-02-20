@@ -5,9 +5,9 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import TableCell from '@material-ui/core/TableCell';
-//import TableBody from "@material-ui/core/TableBody";
+import TableBody from "@material-ui/core/TableBody";
 import Card from '@material-ui/core/Card';
-//import BikeTableRow from "./BikeTableRow";
+import BuilderRow from "./BuilderRow";
 import "./BuildDash.css";
 
 
@@ -31,7 +31,7 @@ class BuilderTable extends Component {
           </TableHead>
           <TableBody>
          {this.props.builder.map(build =>
-           <BikeTableRow key={build.id} history={this.props.history} build={build} match={this.props.match}/>
+           <BuilderRow key={build.id} history={this.props.history} build={build} match={this.props.match}/>
          )}
          
        

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './Bikefile.css';
+import './BikeFile.css';
 
 class BikeFile extends Component {
     render() {
