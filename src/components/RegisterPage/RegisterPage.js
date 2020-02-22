@@ -8,6 +8,8 @@ class RegisterPage extends Component {
     password: '',
   };
 
+  // reg page css on non mobile needs some slight work
+
   registerUser = (event) => {
     event.preventDefault();
 
