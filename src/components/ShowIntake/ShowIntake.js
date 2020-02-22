@@ -97,7 +97,7 @@ class ShowIntake extends Component {
                             color="secondary"
                             onClick={this.addShow}
                             style={{ margin: 10}}>
-                    Add Builder!
+                    Add Show Information!
                     </Button>
                     <br/>
                     </div>
