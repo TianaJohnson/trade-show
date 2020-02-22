@@ -8,6 +8,12 @@
         padding: 190px;
     }
 
+    @media screen and (max-width: 1300px) {
+      .login-background{
+        background-color:brown;
+        padding:80px;
+      }
+    } 
     @media screen and (max-width: 1200px) {
       .login-background{
         background-color: blue;
