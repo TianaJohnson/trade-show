@@ -7,12 +7,26 @@
     background-color:teal;
     padding: 190px;
 }
+
+@media screen and (max-width: 1300px) {
+  .reg-background{
+    background-color: blue;
+    padding:80px;
+  }
+} 
 @media screen and (max-width: 1200px) {
     .reg-background{
       background-color: blue;
       padding:140px;
     }
   }
+
+  @media screen and (max-width: 1050px) {
+    .reg-background{
+      background-color: blue;
+      padding:140px;
+    }
+  }  
 @media screen and (max-width: 950px) {
     .login-background{
       background-color:rgb(255, 51, 0);
