@@ -65,7 +65,7 @@ router.get('/', (req, res) => {
 
 //          //D-delete
 // Delete is not working, I dont have it in me to debufg today
-
+//still
          router.delete('/delete/:id', (req, res) => {
             if (req.isAuthenticated()) {
                 console.log('in delete router', req.params.id);
