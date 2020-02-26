@@ -26,18 +26,17 @@ function* addShow(action) {
 }
 // attempt this again
 function* deleteShowInfo(action) {
-  console.log('In saga archive delete', action.payload.id)
+  const show = action.payload;
+  console.log('In saga archive delete', show);
   try {
-    const remove = yield axios.delete(`/api/show/delete/${action.payload.id}`)
-    yield alert('Show Information Deleted')
-    yield put({ type: 'FETCH_SHOW', payload: remove.data });
+      yield axios.delete(`/api/show/${show}`);
+      let nextAction = { type: 'FETCH_SHOW' };
+      yield put(nextAction);
   }catch(error){
     console.log('Unable to delete trade show info', error);
     alert('Unable to delete trade show information', error);
   }
 }
-
-
   
   function* showIntakesaga() {
     yield takeLatest('ADD_SHOW', addShow);
