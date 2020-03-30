@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
 
 
-class page extends Component {
+
+const Card = styled.div`
+    .page-card {
+        
+    }`;
+
+class Page extends Component {
     render() {
         return (
-            <div></div>
+            <div className="page-basics">
+                <Card className="page-card">
+
+                </Card>
+
+
+            </div>
          )
     }
 }
 const mapStateToProps = reduxStore => {
     return { reduxStore: reduxStore };
     }
-export default connect(mapStateToProps)(page);
+export default connect(mapStateToProps)(Page);
