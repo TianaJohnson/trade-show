@@ -13,7 +13,6 @@ import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
-import Analytics from '../Analytics/Analytics';
 import Dashboard from '../Dashboard/Dashboard';
 import AddShow from '../ShowIntake/ShowIntake';
 import BuildDash from '../BuildDash/BuildDash';
@@ -39,11 +38,7 @@ class App extends Component {
             <Redirect exact from="/" to="/home" />
             {/* Visiting localhost:3000/about will show the about page.
             This is a route anyone can see, no login necessary */}
-            <ProtectedRoute
-              exact
-              path="/analytics"
-              component={Analytics}
-            />
+            
             {/* may become home page, just a test */}
             <ProtectedRoute
               exact
