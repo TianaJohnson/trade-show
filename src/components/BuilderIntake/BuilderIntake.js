@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import './BuilderIntake.css';
+import Page from './../Page/Page.js';
 
 class BuilerIntake extends Component {
 
@@ -44,7 +45,8 @@ class BuilerIntake extends Component {
     render() {
         const build = this.props.reduxStore.builder.builderReducer;
         return (
-            <div>
+            <Page>
+
                 <Card className="addNewCard">
                     <div className="new-build-form">
                         <h1>Builder Information</h1>
@@ -111,7 +113,7 @@ class BuilerIntake extends Component {
                     <br/>
                     </div>
                 </Card>
-            </div>
+            </Page>
          )
     }
 }
