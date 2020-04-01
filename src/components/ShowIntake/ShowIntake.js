@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import Card from '@material-ui/core/Card';
+import Card from '@material-ui/core/Card';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Page from './../Page/Page.js';
@@ -47,8 +47,8 @@ class ShowIntake extends Component {
 
     render() {
         return (
-            <Page>
-                <div className="addNewCard">
+            <div>
+                <Card className="addNewCard">
                     <div className="new-build-form">
                         <h1>Show Information</h1>
                     <div className="new-input-fields">  
@@ -102,8 +102,8 @@ class ShowIntake extends Component {
                     </Button>
                     <br/>
                     </div>
-                </div>
-            </Page>
+                </Card>
+            </div>
          )
     }
 }
