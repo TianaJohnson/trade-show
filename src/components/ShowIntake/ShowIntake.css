@@ -1,4 +1,8 @@
 .addNewCard {
-    height: 600px;
-   
+    height: 600px;   
+}
+@media screen and (max-width: 1300px) {
+    .addNewCard {
+    height: 800px;
+    }
 }
